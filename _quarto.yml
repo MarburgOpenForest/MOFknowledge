@@ -60,6 +60,7 @@ website:
           - mofgeodb/mof-geodb-about.qmd
           - mofgeodb/mof-geodb-views.qmd
           - mofgeodb/mof-geodb-plots.qmd
+          
           # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-fieldwork/
           #   text: uav/Flight Planning
       - text: "---"
