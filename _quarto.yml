@@ -1,0 +1,60 @@
+project: 
+  type: website
+  output-dir: docs
+  
+website:
+  open-graph: true
+  page-navigation: false  
+  title: "gisma knowledge base"
+  site-url: https://gisma-courses.github.io/gisma-knowledge-base
+  
+  repo-url: https://github.com/gisma-courses/gisma-knowledge-base
+  repo-actions: [edit, issue]
+    
+  page-footer: "gisma (2021)" 
+  twitter-card:
+    creator: "@creuden"
+  #comments:
+  #  utterances:
+  #    repo: gisma-courses/mm218.dev
+  navbar:
+    right:
+      - text: "Home"
+        href: index.html
+
+    tools: 
+      - icon: github
+        href: https://github.com/gisma-courses/gisma-knowledge-base
+        text: "gisma repo" 
+
+
+  sidebar:
+    logo: https://gisma-courses.github.io/gc/assets/images/gisma-13.jpg
+    pinned: true
+    align: center
+
+
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Welcome"
+        contents:
+          - index.md
+          - about.md
+
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    code-background: true
+    code-copy: true
+    css: styles.css
+    toc: true
+
+filters:
+  - include-files.lua
+  - quarto
