@@ -8,16 +8,16 @@ bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 link-citations: true
 ---
-![](/images/DJI_0071.JPG)
+![](/images/DJI_0071.JPG){width="75%"}
+
 # General Setting
+
 The MOFgeoDB is a [SQlite](https://www.sqlite.org/) database using the spatial extension [spatialite](https://www.gaia-gis.it/fossil/libspatialite) and serves our data of vegetation (mainly trees) and study plots for ecosystem research (forest structure, experiments) over time. Additional there are some auxiliary datasets (geopackage) of infrastructure for visual reasons. [QGIS](https://qgis.org/) is used as back-end for analysis and visualization. All data is available at [GitHub Repo MOFgeoDB](https://github.com/MarburgOpenForest/MOFgeoDB).
 
 # Relational Structure
 First overview of the relational structure gives figure \@ref(fig:erd-complete-fig).
 
-```{r erd-complete-fig, echo=FALSE, fig.align='center', out.width='800px', fig.cap='Complete ER diagram of MOFgeoDB without `lut_creator` table', fig.alt='ER diagram MOFgeoDB complete'}
-knitr::include_graphics("images/erd_complete.png")
-```
+![Complete ER diagram of MOFgeoDB without `lut_creator` table](images/erd_complete.png){width="75%"}
 
 The database can be divided into following sections:
 
@@ -27,16 +27,13 @@ The database can be divided into following sections:
 
 When necessary the creator (referenced via `creator_id`, see fig. \@ref(fig:erd-lut-creator-fig)) and the date (day) of each single measurement is noted. Creator are stored in the look-up table `lut_creator` which can be a single person or (study) group and is designed rather simple.
 
-```{r erd-lut-creator-fig, echo=FALSE, fig.align='center', fig.cap='Table lut_creator', fig.alt='Table structure lut_creator'}
-knitr::include_graphics("images/erd_lut_creator_only.png")
-```
+![Table lut_creator](images/erd_lut_creator_only.png)
 
 ### Trees
 Trees are measured as single individiums from a diameter of 7 cm. All trees have a unique identifier (`tree_id`) which is a combination of a lowercase letter (r=red, b=blue) and a five digit number. These identifiers are nailed to the real trees as in figure \@ref(fig:tree-marker) shown to identify them in the field.  Beside the geolocation of the center point at surface (`easting`,`northing`) and the method of this measurement (`geomeasurement_id`, see chapter geomeasurements), the species is mandatory via the species list (`species_id` from `german_sl`, [GermanSL](https://germansl.infinitenature.org/)).
 
-```{r tree-marker, echo=FALSE, fig.align='center', fig.cap='Marker on tree as `tree_id`, here b00930', fig.alt='Marker on tree'}
-knitr::include_graphics("images/tree-marker.png")
-```
+
+![Marker on tree as `tree_id`, here b00930](images/tree-marker.png){width="75%"}
 
 Geolocation is possible via a direct measurement of coordinates (usually using some sort of GNSS or terrestrial survey) or the determination via a topopoint using angle and distance as polar coordinates. [Triggers](../2021-12-09-triggers/) calculate the coordinates on insert and update of relevant items.
 
@@ -71,9 +68,7 @@ There are different type of survey plots (see also [`lut_plottype`](../2021-12-1
 
 Most common is the fs-plot for forest structure survey. Most of the plots get their geolocation from a fixed benchmark in the field (see figure \@ref(fig:benchmark-fig)) documented in `topopoint`.
 
-```{r benchmark-fig, echo=FALSE, fig.align='center', fig.cap='Benchmark', fig.alt='Benchmark'}
-knitr::include_graphics("images/benchmark.png")
-```
+(images/benchmark.png){width="75%"}
 
 The `plot_diary`can be used to document surveys on a plot linking specific actions (`lut_action`) to the desired plot and time. Automatic generation of subplots are possible and is implemented using triggers for the exclosure plot design. Triggers also manage the insertion, update and deletion of topopoints and plots.
 
