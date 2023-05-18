@@ -3,28 +3,25 @@ project:
   output-dir: docs
 execute:
   freeze: auto  
+
 website:
   open-graph: true
-  twitter-card:
-    creator: "@creuden"
-  page-footer: "gisma (2022) [Impressum](base/impressum.html)" 
-  
   page-navigation: true  
-  title: "gisma knowledge base"
-  site-url: https://marburgopenforest.github.io/MOFknowledge
+  title: "Marburg Open Forest"
+  site-url: https://MarburgOpenForest.github.io/
   repo-url: https://github.com/MarburgOpenForest/MOFknowledge
   repo-actions: [edit, issue]
   search: 
     location: navbar
     type: textbox
-
-
-#  comments:
-#    utterances:
-#      repo: gisma-courses/gisma-knowledge-base
-
+  page-footer: "Faculty of Geography (2018-2023)" 
+  # twitter-card:
+  #   creator: "@yxz"
+  # comments:
+  #   utterances:
+  #     repo: yourgithubname/yourreponame
   navbar:
-    logo: /images/logooil.jpg
+    logo: /images/logo.jpg
     left:
       - icon: question-square-fill
         text: FAQ
@@ -32,24 +29,20 @@ website:
       - icon: journals
         text: Self-study
         href: modules/slidelist.qmd             
-      - icon: file-slides-fill
-        text: Slides
-        href: slides/slidelist.qmd
-      - icon: check2-square
-        text: Test It
-        href: assessment/slidelist.qmd   
-      
-    right:
-      - icon: chat-left-text-fill
-        text: Ilias
-        href: https://ilias.uni-marburg.de/login.php?target=&client_id=UNIMR&cmd=force_login
-
-    
-         
-    tools: 
+    #   - icon: file-slides-fill
+    #     text: Slides
+    #     href: slides/slidelist.qmd
+    #   - icon: check2-square
+    # #     text: Test It
+    #     href: assessment/slidelist.qmd   
+    # # right:
+    #   - icon: chat-left-text-fill
+    #     text: Ilias
+    #     href: https://ilias.uni-marburg.de/login.php?target=&client_id=UNIMR&cmd=force_login
+    tools:
       - icon: github
         href: https://github.com/MarburgOpenForest/MOFknowledge
-        text: "gisma repo" 
+        text: "repo" 
   sidebar:
     # logo: /images/logo.jpg
     pinned: true
@@ -62,20 +55,19 @@ website:
           - index.md
           - base/about.qmd
       - text: "---"
-      - section: "Low Cost UAV"
+      - section: "MOFgeoDB"
         contents:
-          - uav/uav-index.qmd
-          - uav/listing1.qmd
-          - uav/products.qmd
-          # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-introduction/
-          #   text: Basic Readings        
+          - mofgeodb/mof-geodb-about.qmd
+          - mofgeodb/mof-geodb-views.qmd
+          - mofgeodb/mof-geodb-plots.qmd
+          - mofgeodb/mof-geodb-plots.qmd
           # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-fieldwork/
           #   text: uav/Flight Planning
       - text: "---"
-      - section: "Micro-Climate"
-        contents:
-          - mclim/mc-index.qmd
-          - mclim/sensors.qmd
+      # - section: "topic2"
+      #   contents:
+      #     - topic2/topic2-index.qmd
+          
 
 #format: dokuwiki
 format:
