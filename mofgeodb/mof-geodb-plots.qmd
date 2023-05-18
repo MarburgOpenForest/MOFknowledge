@@ -7,7 +7,8 @@ description: 'Various forest structural plot designs in the MOF'
 
 
 ---
-![](/images/DJI_0264.JPG)
+
+![](images/DJI_0264.JPG){width="75%"}
 
 # Survey Plots
 
@@ -22,9 +23,8 @@ General characteristics are:
 
 All plots are marked with a central point (stored in `topopoint`, see figure \@ref(fig:benchmark-fig)).
 
-```{r benchmark-fig, echo=FALSE, fig.align='center', fig.cap='Benchmark', fig.alt='Benchmark'}
-knitr::include_graphics("images/benchmark.png")
-```
+
+![Benchmark](images/benchmark.png){width="75%"}
 
 On the plot following items are surveyed depending on time:
 * coordinates of all trees from 7 cm dbh
@@ -38,13 +38,14 @@ On the plot following items are surveyed depending on time:
   
 A plot from data out of MOFgeoDB is shown in figure \@ref(fig:fs-plot-fig).
 
-```{r fs-plot-fig, echo=FALSE, fig.align='center', fig.cap='fs-004 as example for the visualization of the plot data in QGIS.', fig.alt='Example of fs-plot'}
-knitr::include_graphics("images/fs-004_plotExample.png")
-```
+
+![fs-004 as example for the visualization of the plot data in QGIS.](images/fs-004_plotExample.png){width="75%"}
+
 In real the plot looks something like this:
 ```{r fs-004-summerPano-fig, echo=FALSE, fig.align='center', fig.cap='Panoramic view of fs-004 in summer.', fig.alt='Summer pano of fs-004'}
 knitr::include_graphics("images/fs-004_summerPano.jpg")
 ```
+![Panoramic view of fs-004 in summer.](images/fs-004_summerPano.jpg){width="100%"}
 
 All plots are visited sporadically. The locations are shown in figure XXX
 
