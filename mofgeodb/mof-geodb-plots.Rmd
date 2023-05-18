@@ -70,5 +70,5 @@ This will generate the below map.
 
 
 ```{=html}
-<iframe width="780" height="500" src="images/plots.html" title="Mapview visualitsation"></iframe>
+<iframe width="780" height="500" src="images/plots.html" title="Mapview Visualisation of the plots"></iframe>
 ```
