@@ -50,7 +50,6 @@ You can easily use R for retrievieng and visualising all plots from the github r
 ```{r setup, include=FALSE}
 library(sf)
 library(mapview)
-library(rmarkdown)
 ```
 
 
