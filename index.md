@@ -1,5 +1,5 @@
 ---
-title: "Welcome to the Marburg Open Forest knowledgebase web space"
+title: "The Marburg Open Forest knowledgebase web space"
 open-graph:
   description: "Most of the time, data matters more than the model. But what is reality without model?"
   image: /images/wieseBauwagen.png
@@ -28,7 +28,7 @@ comments: false
  
   <img src="/images/wieseBauwagen.png" alt="Snow" style="width:100%;">
   
-   <div class="bottom-left"><H1>The Grubenwiese</H1></div>
+   <div class="bottom-left"><H3>Core Unit Grubenwiese</H3></div>
 </div>
 
 
