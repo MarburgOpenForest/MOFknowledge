@@ -1,71 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/uav/planning.html</loc>
-    <lastmod>2023-05-18T20:02:08.689Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/base/about.html</loc>
+    <lastmod>2023-05-18T20:21:35.143Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/uav/uav-index.html</loc>
-    <lastmod>2023-05-18T20:02:11.157Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/base/impressum.html</loc>
+    <lastmod>2023-05-18T20:21:38.043Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/uav/products.html</loc>
-    <lastmod>2023-05-18T20:02:11.617Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/base/faq.html</loc>
+    <lastmod>2023-05-18T20:21:38.415Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/uav/listing1.html</loc>
-    <lastmod>2023-05-18T20:02:12.097Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/modules/en-git-module.html</loc>
+    <lastmod>2023-05-18T20:21:39.811Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/mclim/mc-index.html</loc>
-    <lastmod>2023-05-18T20:02:12.765Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/modules/de-git-module.html</loc>
+    <lastmod>2023-05-18T20:21:41.267Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/mclim/sensors.html</loc>
-    <lastmod>2023-05-18T20:02:13.285Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/modules/slidelist.html</loc>
+    <lastmod>2023-05-18T20:21:41.719Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/base/about.html</loc>
-    <lastmod>2023-05-18T20:02:13.757Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/slides/slide1.html</loc>
+    <lastmod>2023-05-18T20:21:42.487Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/base/impressum.html</loc>
-    <lastmod>2023-05-18T20:02:15.345Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/slides/slidelist.html</loc>
+    <lastmod>2023-05-18T20:21:43.567Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/base/faq.html</loc>
-    <lastmod>2023-05-18T20:02:15.861Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-about.html</loc>
+    <lastmod>2023-05-18T20:21:44.735Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/modules/en-git-module.html</loc>
-    <lastmod>2023-05-18T20:02:17.793Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-plots.html</loc>
+    <lastmod>2023-05-18T20:21:45.403Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/modules/de-git-module.html</loc>
-    <lastmod>2023-05-18T20:02:19.745Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-views.html</loc>
+    <lastmod>2023-05-18T20:21:45.935Z</lastmod>
   </url>
   <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/modules/slidelist.html</loc>
-    <lastmod>2023-05-18T20:02:20.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/slides/slide1.html</loc>
-    <lastmod>2023-05-18T20:02:22.401Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/slides/slidelist.html</loc>
-    <lastmod>2023-05-18T20:02:23.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/index.html</loc>
-    <lastmod>2023-05-18T20:02:24.413Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/assessment/learnr_app-2.html</loc>
-    <lastmod>2023-05-18T20:02:24.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marburgopenforest.github.io/MOFknowledge/assessment/slidelist.html</loc>
-    <lastmod>2023-05-18T20:02:25.469Z</lastmod>
+    <loc>https://MarburgOpenForest.github.io/index.html</loc>
+    <lastmod>2023-05-18T20:21:46.299Z</lastmod>
   </url>
 </urlset>

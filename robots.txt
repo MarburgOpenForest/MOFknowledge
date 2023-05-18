@@ -1,1 +1,1 @@
-Sitemap: https://marburgopenforest.github.io/MOFknowledge/sitemap.xml
+Sitemap: https://MarburgOpenForest.github.io/sitemap.xml
