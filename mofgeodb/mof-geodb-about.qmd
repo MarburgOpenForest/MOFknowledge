@@ -8,7 +8,7 @@ bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 link-citations: true
 ---
-![](/images/DJI_0071.JPG){width="75%"}
+![](../images/DJI_0071.JPG){width="75%"}
 
 # General Setting
 

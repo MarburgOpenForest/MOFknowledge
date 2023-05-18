@@ -8,7 +8,7 @@ description: 'Various forest structural plot designs in the MOF'
 
 ---
 
-![](images/DJI_0264.JPG){width="75%"}
+![](../images/DJI_0264.JPG){width="75%"}
 
 # Survey Plots
 

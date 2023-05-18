@@ -7,7 +7,7 @@ description: 'Views are used to get a defined subset and collection of data from
 
 ---
 
-![](/images/DJI_0071.JPG)
+![](../images/DJI_0071.JPG)
 
 Views are used to get a defined subset and collection of data from different relations. All views are nemed with a prefix `vw_`.
 
