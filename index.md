@@ -20,8 +20,8 @@ comments: false
 
 
 
-![](//images/climatroof-sp.jpg)
+![](/images/wieseBauwagen.png)
 
-# Welcome to the gisma knowledgebase web space
+# Welcome to the Marburg Open Forest knowledgebase web space
 
-This site concisely summarizes workflow knowledge and resources on a wide variety of GI, sensor-based data collection and modeling topics. It is explicitly designed as a practice-focused knowledge workshop
+This page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest  into a knowledge base.
