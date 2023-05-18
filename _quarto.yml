@@ -11,17 +11,17 @@ website:
   
   page-navigation: true  
   title: "gisma knowledge base"
-  site-url: https://gisma-courses.github.io/gisma-knowledge-base
-  repo-url: https://github.com/gisma-courses/gisma-knowledge-base
+  site-url: https://marburgopenforest.github.io/MOFknowledge
+  repo-url: https://github.com/MarburgOpenForest/MOFknowledge
   repo-actions: [edit, issue]
   search: 
     location: navbar
     type: textbox
 
 
-  comments:
-    utterances:
-      repo: gisma-courses/gisma-knowledge-base
+#  comments:
+#    utterances:
+#      repo: gisma-courses/gisma-knowledge-base
 
   navbar:
     logo: /images/logooil.jpg
@@ -48,7 +48,7 @@ website:
          
     tools: 
       - icon: github
-        href: https://github.com/gisma-courses/gisma-knowledge-base
+        href: https://github.com/MarburgOpenForest/MOFknowledge
         text: "gisma repo" 
   sidebar:
     # logo: /images/logo.jpg
