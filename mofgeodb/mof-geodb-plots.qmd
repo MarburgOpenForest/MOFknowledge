@@ -50,6 +50,7 @@ All plots are visited sporadically. The locations are shown in figure XXX
 ```{r setup, include=FALSE}
 library(sf)
 library(mapview)
+library(rmarkdown)
 ```
 
 
