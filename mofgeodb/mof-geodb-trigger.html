@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="goettlic">
+<meta name="dcterms.date" content="2021-12-09">
+<meta name="description" content="All custom made triggers in the MOFgeoDB">
+
+<title>Marburg Open Forest - Triggers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../mofgeodb/mof-geodb-experiments.html" rel="next">
+<link href="../mofgeodb/mof-geodb-lookup.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../css/styles.css">
+<meta property="og:title" content="Marburg Open Forest - Triggers">
+<meta property="og:description" content="All custom made triggers in the MOFgeoDB">
+<meta property="og:image" content="">
+<meta property="og:site-name" content="Marburg Open Forest">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo.jpg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Marburg Open Forest</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../base/faq.html" rel="" target=""><i class="bi bi-question-square-fill" role="img">
+</i> 
+ <span class="menu-text">FAQ</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules/slidelist.html" rel="" target=""><i class="bi bi-journals" role="img">
+</i> 
+ <span class="menu-text">Self-study</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+    <a href="https://github.com/MarburgOpenForest/MOFknowledge" title="repo" class="quarto-navigation-tool px-1" aria-label="repo"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../mofgeodb/mof-geodb-about.html">MOFgeoDB</a></li><li class="breadcrumb-item"><a href="../mofgeodb/mof-geodb-trigger.html">Triggers</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Welcome</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Marburg Open Forest knowledgebase web space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../base/about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About this site</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">MOFgeoDB</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Description MOFgeoDB</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-views.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Views</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-plots.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plots</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-lookup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lookup Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-trigger.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Triggers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-experiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experiments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mofgeodb/mof-geodb-datacollect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Collecting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#all-custom-made-triggers-in-the-mofgeodb" id="toc-all-custom-made-triggers-in-the-mofgeodb" class="nav-link active" data-scroll-target="#all-custom-made-triggers-in-the-mofgeodb">All custom made triggers in the MOFgeoDB</a>
+  <ul class="collapse">
+  <li><a href="#trees" id="toc-trees" class="nav-link" data-scroll-target="#trees">Trees</a>
+  <ul class="collapse">
+  <li><a href="#a-new-tree-is-inserted" id="toc-a-new-tree-is-inserted" class="nav-link" data-scroll-target="#a-new-tree-is-inserted">A new tree is inserted:</a></li>
+  <li><a href="#coordinates-of-the-tree-changed" id="toc-coordinates-of-the-tree-changed" class="nav-link" data-scroll-target="#coordinates-of-the-tree-changed">Coordinates of the tree changed:</a></li>
+  <li><a href="#new-tree_state-is-inserted" id="toc-new-tree_state-is-inserted" class="nav-link" data-scroll-target="#new-tree_state-is-inserted">New tree_state is inserted</a></li>
+  <li><a href="#diameter-or-perimeter-is-inserted-or-updated" id="toc-diameter-or-perimeter-is-inserted-or-updated" class="nav-link" data-scroll-target="#diameter-or-perimeter-is-inserted-or-updated">Diameter or perimeter is inserted or updated</a></li>
+  <li><a href="#polar-coordinates-for-a-tree-are-inserted-or-updated" id="toc-polar-coordinates-for-a-tree-are-inserted-or-updated" class="nav-link" data-scroll-target="#polar-coordinates-for-a-tree-are-inserted-or-updated">Polar coordinates for a tree are inserted or updated</a></li>
+  </ul></li>
+  <li><a href="#topopoint" id="toc-topopoint" class="nav-link" data-scroll-target="#topopoint">Topopoint</a>
+  <ul class="collapse">
+  <li><a href="#a-new-topopoint-is-inserted" id="toc-a-new-topopoint-is-inserted" class="nav-link" data-scroll-target="#a-new-topopoint-is-inserted">A new topopoint is inserted:</a></li>
+  <li><a href="#coordinates-of-the-topopoint-changed" id="toc-coordinates-of-the-topopoint-changed" class="nav-link" data-scroll-target="#coordinates-of-the-topopoint-changed">Coordinates of the topopoint changed:</a></li>
+  </ul></li>
+  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a>
+  <ul class="collapse">
+  <li><a href="#new-plot-is-inserted" id="toc-new-plot-is-inserted" class="nav-link" data-scroll-target="#new-plot-is-inserted">New plot is inserted:</a></li>
+  <li><a href="#parameters-of-the-plots-changed" id="toc-parameters-of-the-plots-changed" class="nav-link" data-scroll-target="#parameters-of-the-plots-changed">parameters of the plots changed:</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/MarburgOpenForest/MOFknowledge/edit/main/mofgeodb/mof-geodb-trigger.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/MarburgOpenForest/MOFknowledge/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Triggers</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MOFgeoDB</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    All custom made triggers in the MOFgeoDB
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>goettlic </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 9, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="all-custom-made-triggers-in-the-mofgeodb" class="level1">
+<h1>All custom made triggers in the MOFgeoDB</h1>
+<p>Triggers run automatically before or after a specific command is executed on the database. They are absolutely necessary to keep the database running. There are many more triggers which are created automatically by spatialite to keep the geometries consistent. Please remember:</p>
+<blockquote class="blockquote">
+<p>A TRIGGER that has not been properly tested is called a … ¡¡¡ D I S A S T E R !!!<br> The slightest Syntax-Error can lead to … Hard to trace, unexpected behaviour!<br> Since only the original author knows the purpose of the TRIGGER … No validity checks can be made.<br> — <cite><a href="http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-5/cookbook_topics.adminstration.html#topic_Adminstration_Introduction">Alessandro Furieri</a></cite></p>
+</blockquote>
+<section id="trees" class="level2">
+<h2 class="anchored" data-anchor-id="trees">Trees</h2>
+<section id="a-new-tree-is-inserted" class="level3">
+<h3 class="anchored" data-anchor-id="a-new-tree-is-inserted">A new tree is inserted:</h3>
+<section id="insert_tree_create_geometry" class="level4">
+<h4 class="anchored" data-anchor-id="insert_tree_create_geometry">insert_tree_create_geometry</h4>
+<p>… the geometry point is set:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_tree_create_geometry"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"tree"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.easting <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.northing <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> GeomFromText(<span class="st">'POINT('</span><span class="op">||</span><span class="ot">"easting"</span><span class="op">||</span><span class="st">' '</span><span class="op">||</span><span class="ot">"northing"</span><span class="op">||</span><span class="st">')'</span>,<span class="dv">25832</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="insert_tree_create_tree_state" class="level4">
+<h4 class="anchored" data-anchor-id="insert_tree_create_tree_state">insert_tree_create_tree_state</h4>
+<p>… the <code>tree_state.id</code> is set to 0 (zero = first database entry)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_tree_create_tree_state"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"tree"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">INSERT</span> <span class="kw">INTO</span> tree_state (tree_id,creator_id,<span class="dt">date</span>,state_id,remarks) <span class="kw">VALUES</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.tree_id, <span class="kw">NEW</span>.creator_id, <span class="kw">NEW</span>.<span class="dt">date</span>, <span class="dv">0</span>, <span class="kw">NULL</span>);</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="coordinates-of-the-tree-changed" class="level3">
+<h3 class="anchored" data-anchor-id="coordinates-of-the-tree-changed">Coordinates of the tree changed:</h3>
+<section id="update_tree_update_geometry" class="level4">
+<h4 class="anchored" data-anchor-id="update_tree_update_geometry">update_tree_update_geometry</h4>
+<p>… the geometry point is updated</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_tree_update_geometry"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"tree"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.easting <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.northing <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> (<span class="kw">OLD</span>.easting <span class="kw">IS</span> <span class="kw">NULL</span> <span class="kw">OR</span> <span class="kw">OLD</span>.northing <span class="kw">IS</span> <span class="kw">NULL</span> <span class="kw">OR</span> <span class="kw">NEW</span>.easting <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.easting <span class="kw">OR</span> <span class="kw">NEW</span>.northing <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.northing)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> GeomFromText(<span class="st">'POINT('</span><span class="op">||</span><span class="ot">"easting"</span><span class="op">||</span><span class="st">' '</span><span class="op">||</span><span class="ot">"northing"</span><span class="op">||</span><span class="st">')'</span>,<span class="dv">25832</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id; </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="new-tree_state-is-inserted" class="level3">
+<h3 class="anchored" data-anchor-id="new-tree_state-is-inserted">New tree_state is inserted</h3>
+<section id="delete_tree_state_auto" class="level4">
+<h4 class="anchored" data-anchor-id="delete_tree_state_auto">delete_tree_state_auto</h4>
+<p>… the automatic set tree_state is deleted</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"delete_tree_state_auto"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"tree_state"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.state_id <span class="op">&lt;&gt;</span> <span class="st">'0'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">DELETE</span> <span class="kw">FROM</span> tree_state </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id <span class="kw">AND</span> state_id <span class="op">=</span> <span class="st">'0'</span>;</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="diameter-or-perimeter-is-inserted-or-updated" class="level3">
+<h3 class="anchored" data-anchor-id="diameter-or-perimeter-is-inserted-or-updated">Diameter or perimeter is inserted or updated</h3>
+<section id="insert_diameter_calc_perimeter" class="level4">
+<h4 class="anchored" data-anchor-id="insert_diameter_calc_perimeter">insert_diameter_calc_perimeter</h4>
+<p>… if diameter is inserted, perimeter is calculated</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_diameter_calc_perimeter"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"tree_diameter"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.diameter <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.perimeter <span class="kw">IS</span> <span class="kw">NULL</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree_diameter"</span> <span class="kw">SET</span> <span class="ot">"perimeter"</span> <span class="op">=</span> <span class="ot">"diameter"</span><span class="op">*</span>PI()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id;</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="insert_perimeter_calc_diameter" class="level4">
+<h4 class="anchored" data-anchor-id="insert_perimeter_calc_diameter">insert_perimeter_calc_diameter</h4>
+<p>… if perimeter is inserted, diameter is calculated</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_perimeter_calc_diameter"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"tree_diameter"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.diameter <span class="kw">IS</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.perimeter <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree_diameter"</span> <span class="kw">SET</span> <span class="ot">"diameter"</span> <span class="op">=</span> <span class="ot">"perimeter"</span><span class="op">/</span>PI()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id;</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_diameter_calc_perimeter" class="level4">
+<h4 class="anchored" data-anchor-id="update_diameter_calc_perimeter">update_diameter_calc_perimeter</h4>
+<p>… if diameter is updated, new perimeter is calculated</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_diameter_calc_perimeter"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"tree_diameter"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.diameter <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.diameter <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.diameter</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree_diameter"</span> <span class="kw">SET</span> <span class="ot">"perimeter"</span> <span class="op">=</span> <span class="ot">"diameter"</span><span class="op">*</span>PI()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id;</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_perimeter_calc_diameter" class="level4">
+<h4 class="anchored" data-anchor-id="update_perimeter_calc_diameter">update_perimeter_calc_diameter</h4>
+<p>… if perimeter is updated, diameter is calculated</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_perimeter_calc_diameter"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"tree_diameter"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.perimeter <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.perimeter <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.perimeter</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree_diameter"</span> <span class="kw">SET</span> <span class="ot">"diameter"</span> <span class="op">=</span> <span class="ot">"perimeter"</span><span class="op">/</span>PI()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tree_id <span class="op">=</span> tree_id;</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="polar-coordinates-for-a-tree-are-inserted-or-updated" class="level3">
+<h3 class="anchored" data-anchor-id="polar-coordinates-for-a-tree-are-inserted-or-updated">Polar coordinates for a tree are inserted or updated</h3>
+<section id="insert_tree_cp_update_tree" class="level4">
+<h4 class="anchored" data-anchor-id="insert_tree_cp_update_tree">insert_tree_cp_update_tree</h4>
+<p>… the coordinates (<code>easting</code>, <code>northing</code>) are set</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_tree_cp_update_tree"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"tree_cp"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">WHEN</span> <span class="kw">NEW</span>.tree_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.tp_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.angle <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.distance <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.valid <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">UPDATE</span> <span class="ot">"tree"</span> <span class="kw">SET</span> </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="ot">"easting"</span> <span class="op">=</span> ( <span class="kw">SELECT</span> <span class="fu">round</span>(<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle))<span class="op">*</span><span class="kw">NEW</span>.distance <span class="op">+</span> tp.easting,<span class="dv">2</span>) <span class="kw">AS</span> x</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="ot">"northing"</span> <span class="op">=</span> ( <span class="kw">SELECT</span> <span class="fu">round</span>(<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle))<span class="op">*</span><span class="kw">NEW</span>.distance <span class="op">+</span> tp.northing,<span class="dv">2</span>) <span class="kw">AS</span> y</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> tree.tree_id <span class="op">=</span> <span class="kw">NEW</span>.tree_id <span class="kw">AND</span> tree.geomeasurement_id <span class="kw">IN</span> (<span class="dv">6</span>,<span class="dv">7</span>);</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This triggers <code>update_tree_update_geometry</code>.</p>
+</section>
+<section id="update_tree_cp_update_tree" class="level4">
+<h4 class="anchored" data-anchor-id="update_tree_cp_update_tree">update_tree_cp_update_tree</h4>
+<p>… … the coordinates (<code>easting</code>, <code>northing</code>) are set</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_tree_cp_update_tree"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"tree_cp"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">WHEN</span> <span class="kw">NEW</span>.tree_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.tp_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.angle <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.distance <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.valid <span class="op">=</span> <span class="dv">1</span> <span class="kw">AND</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">NEW</span>.tp_id <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.tp_id <span class="kw">OR</span> <span class="kw">NEW</span>.angle <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.angle <span class="kw">OR</span> <span class="kw">NEW</span>.distance <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.distance <span class="kw">OR</span> <span class="kw">NEW</span>.valid <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.valid)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">UPDATE</span> <span class="ot">"tree"</span> <span class="kw">SET</span> </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="ot">"easting"</span> <span class="op">=</span> ( <span class="kw">SELECT</span> <span class="fu">round</span>(<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle))<span class="op">*</span><span class="kw">NEW</span>.distance <span class="op">+</span> tp.easting,<span class="dv">2</span>) <span class="kw">AS</span> x</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id),</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="ot">"northing"</span> <span class="op">=</span> ( <span class="kw">SELECT</span> <span class="fu">round</span>(<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle))<span class="op">*</span><span class="kw">NEW</span>.distance <span class="op">+</span> tp.northing,<span class="dv">2</span>) <span class="kw">AS</span> y</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id) </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> tree.tree_id <span class="op">=</span> <span class="kw">NEW</span>.tree_id <span class="kw">AND</span> tree.geomeasurement_id <span class="kw">IN</span> (<span class="dv">6</span>,<span class="dv">7</span>);</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This triggers <code>update_tree_update_geometry</code>.</p>
+</section>
+</section>
+</section>
+<section id="topopoint" class="level2">
+<h2 class="anchored" data-anchor-id="topopoint">Topopoint</h2>
+<section id="a-new-topopoint-is-inserted" class="level3">
+<h3 class="anchored" data-anchor-id="a-new-topopoint-is-inserted">A new topopoint is inserted:</h3>
+<section id="insert_topopoint_create_geometry" class="level4">
+<h4 class="anchored" data-anchor-id="insert_topopoint_create_geometry">insert_topopoint_create_geometry</h4>
+<p>… the geometry point is set:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_topopoint_create_geometry"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"topopoint"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.easting <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.northing <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"topopoint"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> GeomFromText(<span class="st">'POINT('</span><span class="op">||</span><span class="ot">"easting"</span><span class="op">||</span><span class="st">' '</span><span class="op">||</span><span class="ot">"northing"</span><span class="op">||</span><span class="st">')'</span>,<span class="dv">25832</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp_id;</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="coordinates-of-the-topopoint-changed" class="level3">
+<h3 class="anchored" data-anchor-id="coordinates-of-the-topopoint-changed">Coordinates of the topopoint changed:</h3>
+<section id="update_topopoint_update_geometry" class="level4">
+<h4 class="anchored" data-anchor-id="update_topopoint_update_geometry">update_topopoint_update_geometry</h4>
+<p>…the geometry point is updated</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_topopoint_update_geometry"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"topopoint"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.easting <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.northing <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> (<span class="kw">NEW</span>.easting <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.easting <span class="kw">OR</span> <span class="kw">NEW</span>.northing <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.northing)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"topopoint"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> GeomFromText(<span class="st">'POINT('</span><span class="op">||</span><span class="ot">"easting"</span><span class="op">||</span><span class="st">' '</span><span class="op">||</span><span class="ot">"northing"</span><span class="op">||</span><span class="st">')'</span>,<span class="dv">25832</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp_id;</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_topopoint_update_plot_circle" class="level4">
+<h4 class="anchored" data-anchor-id="update_topopoint_update_plot_circle">update_topopoint_update_plot_circle</h4>
+<p>…all circular plots (<code>plot.xlength IS NOT NULL AND plot.ylength IS NULL</code>) geometry are updated</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_topopoint_update_plot_circle"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"topopoint"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.geometry <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.geometry <span class="kw">AND</span> <span class="kw">EXISTS</span> (<span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> plot <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> plot.tp_id <span class="kw">AND</span> plot.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> plot.ylength <span class="kw">IS</span> <span class="kw">NULL</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> geom <span class="kw">FROM</span> (<span class="kw">SELECT</span> p.plot_id, Buffer(<span class="kw">NEW</span>.geometry,p.xlength<span class="op">/</span><span class="dv">2</span>) <span class="kw">AS</span> geom <span class="kw">FROM</span> plot <span class="kw">AS</span> p </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> p.tp_id) <span class="kw">AS</span> tpp <span class="kw">WHERE</span> tpp.plot_id <span class="op">=</span> plot.plot_id)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> plot_id <span class="kw">IN</span> (<span class="kw">SELECT</span> plot_id <span class="kw">FROM</span> plot <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> plot.tp_id <span class="kw">AND</span> plot.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> plot.ylength <span class="kw">IS</span> <span class="kw">NULL</span>);</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_topopoint_update_plot_rectangle" class="level4">
+<h4 class="anchored" data-anchor-id="update_topopoint_update_plot_rectangle">update_topopoint_update_plot_rectangle</h4>
+<p>…all rectangular plots (<code>plot.xlength IS NOT NULL AND plot.ylength IS NOT NULL AND plot.angle IS NOT NULL AND plot.plottype_id &lt;&gt; 'sub'</code>) geometry are updated</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_topopoint_update_plot_rectangle"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"topopoint"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.geometry <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.geometry <span class="kw">AND</span> <span class="kw">EXISTS</span> (<span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> plot <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> plot.tp_id <span class="kw">AND</span> plot.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         plot.ylength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> plot.angle <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> plot.plottype_id <span class="op">&lt;&gt;</span> <span class="st">'sub'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> geom <span class="kw">FROM</span> (<span class="kw">SELECT</span> p.plot_id, GeomFromText(<span class="st">'POLYGON(('</span><span class="op">||</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/</span><span class="dv">2</span>), (p.xlength<span class="op">/-</span><span class="dv">2</span>)))<span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/</span><span class="dv">2</span>), (p.xlength<span class="op">/-</span><span class="dv">2</span>)))<span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/</span><span class="dv">2</span>), (p.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/</span><span class="dv">2</span>), (p.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/-</span><span class="dv">2</span>),(p.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/-</span><span class="dv">2</span>),(p.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/-</span><span class="dv">2</span>),(p.xlength<span class="op">/-</span><span class="dv">2</span>)))<span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/-</span><span class="dv">2</span>),(p.xlength<span class="op">/-</span><span class="dv">2</span>)))<span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/</span><span class="dv">2</span>), (p.xlength<span class="op">/-</span><span class="dv">2</span>)))<span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>            (<span class="kw">NEW</span>.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(p.angle) <span class="op">+</span> <span class="fu">atan2</span>((p.ylength<span class="op">/</span><span class="dv">2</span>), (p.xlength<span class="op">/-</span><span class="dv">2</span>)))<span class="op">*</span> <span class="fu">sqrt</span>(pow(p.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(p.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span> <span class="st">'))'</span>,<span class="dv">25832</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">AS</span> geom <span class="kw">FROM</span> plot <span class="kw">AS</span> p <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> p.tp_id) <span class="kw">AS</span> tpp <span class="kw">WHERE</span> tpp.plot_id <span class="op">=</span> plot.plot_id)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> plot_id <span class="kw">IN</span> (<span class="kw">SELECT</span> plot_id <span class="kw">FROM</span> plot <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> plot.tp_id <span class="kw">AND</span> plot.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>         plot.ylength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> plot.angle <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> plot.plottype_id <span class="op">&lt;&gt;</span> <span class="st">'sub'</span>);</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_topopoint_update_tree_coordinates" class="level4">
+<h4 class="anchored" data-anchor-id="update_topopoint_update_tree_coordinates">update_topopoint_update_tree_coordinates</h4>
+<p>…all trees depending on a central point using polar coordinates (<code>tree.geomeasurement_id IN (6,7) AND tree_cp.valid = 1</code>) coordinates are updated</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_topopoint_update_tree_coordinates"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"topopoint"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.geometry <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.geometry <span class="kw">AND</span> <span class="kw">EXISTS</span> (<span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> tree, tree_cp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tree_cp.tp_id <span class="kw">AND</span> tree_cp.tree_id <span class="op">=</span> tree.tree_id <span class="kw">AND</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>         tree.geomeasurement_id <span class="kw">IN</span> (<span class="dv">6</span>,<span class="dv">7</span>) <span class="kw">AND</span> tree_cp.valid <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"tree"</span> <span class="kw">SET</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>            <span class="ot">"easting"</span> <span class="op">=</span> (<span class="kw">SELECT</span> x <span class="kw">FROM</span> (<span class="kw">SELECT</span> tc.tree_id, <span class="fu">round</span>(<span class="fu">sin</span>(radians(tc.angle))<span class="op">*</span>tc.distance <span class="op">+</span> <span class="kw">NEW</span>.easting,<span class="dv">2</span>) <span class="kw">AS</span> x <span class="kw">FROM</span> tree_cp <span class="kw">AS</span> tc <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tc.tp_id)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                         <span class="kw">AS</span> tptc <span class="kw">WHERE</span> tptc.tree_id <span class="op">=</span> tree.tree_id),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>            <span class="ot">"northing"</span> <span class="op">=</span> (<span class="kw">SELECT</span> y <span class="kw">FROM</span> (<span class="kw">SELECT</span> tc.tree_id, <span class="fu">round</span>(<span class="fu">cos</span>(radians(tc.angle))<span class="op">*</span>tc.distance <span class="op">+</span> <span class="kw">NEW</span>.northing,<span class="dv">2</span>) <span class="kw">AS</span> y <span class="kw">FROM</span> tree_cp <span class="kw">AS</span> tc <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tc.tp_id)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                         <span class="kw">AS</span> tptc <span class="kw">WHERE</span> tptc.tree_id <span class="op">=</span> tree.tree_id)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> tree.tree_id <span class="kw">IN</span> (<span class="kw">SELECT</span> tree.tree_id <span class="kw">FROM</span> tree_cp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tree_cp.tp_id <span class="kw">AND</span> tree_cp.tree_id <span class="op">=</span> tree.tree_id);</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This triggers <code>update_tree_update_geometry</code>.</p>
+</section>
+</section>
+</section>
+<section id="plots" class="level2">
+<h2 class="anchored" data-anchor-id="plots">Plots</h2>
+<section id="new-plot-is-inserted" class="level3">
+<h3 class="anchored" data-anchor-id="new-plot-is-inserted">New plot is inserted:</h3>
+<section id="insert_plot_create_circle" class="level4">
+<h4 class="anchored" data-anchor-id="insert_plot_create_circle">insert_plot_create_circle</h4>
+<p>… circular plot (<code>NEW.xlength IS NOT NULL AND NEW.ylength IS NULL</code>) is inserted, the geometry is set</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_plot_create_circle"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"plot"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.tp_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.ylength <span class="kw">IS</span> <span class="kw">NULL</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> Buffer(tp.geometry,<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>) <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.plot_id <span class="op">=</span> plot_id;</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="insert_plot_create_rectangle" class="level4">
+<h4 class="anchored" data-anchor-id="insert_plot_create_rectangle">insert_plot_create_rectangle</h4>
+<p>… rectangular plot (<code>NEW.xlength IS NOT NULL AND NEW.ylength IS NOT NULL AND NEW.angle IS NOT NULL AND NEW.plottype_id &lt;&gt; 'sub'</code>) is inserted, the geometry is set</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_plot_create_rectangle"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"plot"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.tp_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.ylength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.angle <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.plottype_id <span class="op">&lt;&gt;</span> <span class="st">'sub'</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> GeomFromText(<span class="st">'POLYGON(('</span><span class="op">||</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>            (tp.easting   <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span> <span class="st">'))'</span>,<span class="dv">25832</span>)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.plot_id <span class="op">=</span> plot_id;</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="insert_exc_plot_insert_subplots" class="level4">
+<h4 class="anchored" data-anchor-id="insert_exc_plot_insert_subplots">insert_exc_plot_insert_subplots</h4>
+<p>… after new exclosure plot is inserted, the subplots are inserted</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"insert_exc_plot_insert_subplots"</span> <span class="kw">AFTER</span> <span class="kw">INSERT</span> <span class="kw">ON</span> <span class="ot">"plot"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.plottype_id <span class="op">=</span> <span class="st">'exc'</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">INSERT</span> <span class="kw">INTO</span> <span class="ot">"plot"</span> (plot_id,plottype_id,tp_id,creator_id,<span class="dt">date</span>,angle,xlength,ylength,geometry) </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">SELECT</span> <span class="kw">NEW</span>.plot_id <span class="op">||</span> <span class="ot">"."</span> <span class="op">||</span> b.subplot_id <span class="kw">AS</span> plot_id, <span class="st">'sub'</span> <span class="kw">AS</span> plottype_id, <span class="kw">NEW</span>.tp_id, <span class="kw">NEW</span>.creator_id, <span class="kw">NEW</span>.<span class="dt">date</span>, <span class="kw">NEW</span>.angle, <span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor <span class="kw">AS</span> xlength, <span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor <span class="kw">AS</span> ylength,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>                (<span class="kw">SELECT</span> GeomFromText(<span class="st">'POLYGON(('</span><span class="op">||</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span> <span class="st">'))'</span>,<span class="dv">25832</span>) <span class="kw">AS</span> geometry</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>                <span class="kw">FROM</span> plot <span class="kw">AS</span> p, lut_subplots <span class="kw">AS</span> b <span class="kw">WHERE</span> <span class="kw">NEW</span>.plottype_id <span class="op">=</span> b.plottype_id;</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="parameters-of-the-plots-changed" class="level3">
+<h3 class="anchored" data-anchor-id="parameters-of-the-plots-changed">parameters of the plots changed:</h3>
+<section id="update_plot_update_circle" class="level4">
+<h4 class="anchored" data-anchor-id="update_plot_update_circle">update_plot_update_circle</h4>
+<p>… circular plot geometry is set</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_plot_update_circle"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"plot"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.tp_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.ylength <span class="kw">IS</span> <span class="kw">NULL</span> <span class="kw">AND</span> (<span class="kw">NEW</span>.tp_id <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.tp_id <span class="kw">OR</span> <span class="kw">NEW</span>.xlength <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.xlength)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> Buffer(tp.geometry,<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>) <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.plot_id <span class="op">=</span> plot_id;</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_plot_update_rectangle" class="level4">
+<h4 class="anchored" data-anchor-id="update_plot_update_rectangle">update_plot_update_rectangle</h4>
+<p>… rectangular plot geometry is set</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_plot_update_rectangle"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"plot"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.tp_id <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.xlength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.ylength <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.angle <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">AND</span> <span class="kw">NEW</span>.plottype_id <span class="op">&lt;&gt;</span> <span class="st">'sub'</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">AND</span> (<span class="kw">NEW</span>.tp_id <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.tp_id <span class="kw">OR</span> <span class="kw">NEW</span>.xlength <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.xlength <span class="kw">OR</span> <span class="kw">NEW</span>.ylength <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.ylength <span class="kw">OR</span> <span class="kw">NEW</span>.angle <span class="op">&lt;&gt;</span> <span class="kw">OLD</span>.angle)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> GeomFromText(<span class="st">'POLYGON(('</span><span class="op">||</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>            (tp.easting   <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/-</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>), (<span class="kw">NEW</span>.xlength<span class="op">/-</span><span class="dv">2</span>))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span><span class="dv">2</span>,<span class="dv">2</span>))))<span class="op">||</span> <span class="st">'))'</span>,<span class="dv">25832</span>)</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id)</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> <span class="kw">NEW</span>.plot_id <span class="op">=</span> plot_id;</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update_exc_plot_update_subplots" class="level4">
+<h4 class="anchored" data-anchor-id="update_exc_plot_update_subplots">update_exc_plot_update_subplots</h4>
+<p>… subplots of a exclosure plot geometry is set</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> <span class="ot">"update_exc_plot_update_subplots"</span> <span class="kw">AFTER</span> <span class="kw">UPDATE</span> <span class="kw">ON</span> <span class="ot">"plot"</span> <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> <span class="kw">NEW</span>.plottype_id <span class="op">=</span> <span class="st">'exc'</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">BEGIN</span> </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">UPDATE</span> <span class="ot">"plot"</span> <span class="kw">SET</span> <span class="ot">"geometry"</span> <span class="op">=</span> (<span class="kw">SELECT</span> geom <span class="kw">FROM</span> (<span class="kw">SELECT</span> b.subplot_id, GeomFromText(<span class="st">'POLYGON(('</span><span class="op">||</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos<span class="op">+</span><span class="dv">1</span>),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>)), (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>))))<span class="op">||</span><span class="st">','</span><span class="op">||</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>            (tp.easting  <span class="op">+</span> (<span class="fu">sin</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span><span class="st">' '</span><span class="op">||</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>            (tp.northing <span class="op">+</span> (<span class="fu">cos</span>(radians(<span class="kw">NEW</span>.angle) <span class="op">+</span> <span class="fu">atan2</span>((<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos)),   (<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos)))) <span class="op">*</span> <span class="fu">sqrt</span>(pow(<span class="kw">NEW</span>.xlength<span class="op">/</span>b.x_factor<span class="op">*</span>(b.x_pos),<span class="dv">2</span>) <span class="op">+</span> pow(<span class="kw">NEW</span>.ylength<span class="op">/</span>b.y_factor<span class="op">*</span>(b.y_pos),<span class="dv">2</span>))))<span class="op">||</span> <span class="st">'))'</span>,<span class="dv">25832</span>)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">AS</span> geom <span class="kw">FROM</span> topopoint <span class="kw">AS</span> tp, plot <span class="kw">AS</span> p, lut_subplots <span class="kw">AS</span> b <span class="kw">WHERE</span> <span class="kw">NEW</span>.tp_id <span class="op">=</span> tp.tp_id <span class="kw">AND</span> p.plottype_id <span class="op">=</span> b.plottype_id) <span class="kw">AS</span> sp <span class="kw">WHERE</span> <span class="kw">NEW</span>.plot_id<span class="op">||</span><span class="ot">"."</span><span class="op">||</span>sp.subplot_id <span class="op">=</span> plot.plot_id)</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>       <span class="kw">WHERE</span> plot.plot_id <span class="kw">IN</span> (<span class="kw">SELECT</span> p.plot_id <span class="kw">FROM</span> plot <span class="kw">AS</span> p, lut_subplots <span class="kw">AS</span> b <span class="kw">WHERE</span> <span class="kw">NEW</span>.plot_id <span class="op">=</span> <span class="fu">substr</span>(p.plot_id, <span class="op">-</span><span class="dv">4</span>, <span class="fu">length</span>(p.plot_id)<span class="op">*</span>(<span class="op">-</span><span class="dv">1</span>)) <span class="kw">AND</span> p.plottype_id <span class="op">=</span> <span class="st">'sub'</span>);            </span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.quarto\.org\/custom");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../mofgeodb/mof-geodb-lookup.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lookup Tables</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../mofgeodb/mof-geodb-experiments.html" class="pagination-link">
+        <span class="nav-page-text">Experiments</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Faculty of Geography (2018-2023)</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

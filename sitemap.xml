@@ -2,50 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://MarburgOpenForest.github.io/base/about.html</loc>
-    <lastmod>2023-05-18T22:15:34.187Z</lastmod>
+    <lastmod>2023-05-19T08:13:06.266Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/base/impressum.html</loc>
-    <lastmod>2023-05-18T22:15:37.647Z</lastmod>
+    <lastmod>2023-05-19T08:13:08.210Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/base/faq.html</loc>
-    <lastmod>2023-05-18T22:15:38.107Z</lastmod>
+    <lastmod>2023-05-19T08:13:08.594Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/modules/en-git-module.html</loc>
-    <lastmod>2023-05-18T22:15:39.923Z</lastmod>
+    <lastmod>2023-05-19T08:13:10.122Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/modules/de-git-module.html</loc>
-    <lastmod>2023-05-18T22:15:41.643Z</lastmod>
+    <lastmod>2023-05-19T08:13:11.610Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/modules/slidelist.html</loc>
-    <lastmod>2023-05-18T22:15:42.235Z</lastmod>
+    <lastmod>2023-05-19T08:13:12.062Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/slides/slide1.html</loc>
-    <lastmod>2023-05-18T22:15:44.223Z</lastmod>
+    <lastmod>2023-05-19T08:13:12.834Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/slides/slidelist.html</loc>
-    <lastmod>2023-05-18T22:15:45.539Z</lastmod>
+    <lastmod>2023-05-19T08:13:13.926Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-about.html</loc>
-    <lastmod>2023-05-18T22:15:46.711Z</lastmod>
+    <lastmod>2023-05-19T08:13:15.290Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-datacollect.html</loc>
+    <lastmod>2023-05-19T08:13:15.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-lookup.html</loc>
+    <lastmod>2023-05-19T08:13:16.318Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-plots.html</loc>
-    <lastmod>2023-05-18T22:15:47.439Z</lastmod>
+    <lastmod>2023-05-19T08:13:16.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-experiments.html</loc>
+    <lastmod>2023-05-19T08:13:17.386Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-trigger.html</loc>
+    <lastmod>2023-05-19T08:13:18.158Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-analysis.html</loc>
+    <lastmod>2023-05-19T08:13:18.558Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/mofgeodb/mof-geodb-views.html</loc>
-    <lastmod>2023-05-18T22:15:48.163Z</lastmod>
+    <lastmod>2023-05-19T08:13:19.094Z</lastmod>
   </url>
   <url>
     <loc>https://MarburgOpenForest.github.io/index.html</loc>
-    <lastmod>2023-05-18T22:15:48.627Z</lastmod>
+    <lastmod>2023-05-19T08:13:19.470Z</lastmod>
   </url>
 </urlset>
