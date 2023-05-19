@@ -7,8 +7,8 @@ date: '2021-12-09'
 date-format: "DD.MM.YYYY"
 title-block-banner: ../images/head-assign.jpg
 title-block-banner-color: "black"
-bibliography: ../MOFbib.bib
-csl: ../journal-of-biogeography.csl
+bibliography: ../references/MOFbib.bib
+csl: ../references/journal-of-biogeography.csl
 nocite: '@*' # alle Einträge aus LiteraturDB
 ---
 
