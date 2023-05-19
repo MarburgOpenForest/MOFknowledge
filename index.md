@@ -16,7 +16,7 @@ comments: false
 background-size: cover;
 background-repeat: no-repeat;
   position: relative;
-  text-align: center;
+  text-align: left;
   color: white;
 }
 .bottom-left {
