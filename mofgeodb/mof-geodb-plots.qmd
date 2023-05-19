@@ -57,6 +57,8 @@ library(mapview)
 ```{r eval=FALSE}
 # load plots
 plots <- st_read("https://github.com/MarburgOpenForest/MOFGeoDB/blob/master/MOFgeoDB.sqlite?raw=true", quiet = T, layer = "vw_plot_fs")
+# alternatively from the PUM GitLab repo
+#plots <- st_read("https://gitlab.uni-marburg.de/reudenba/MOFgeoDB/-/raw/master/MOFgeoDB.sqlite?raw=true", quiet = T, layer = "vw_plot_fs")
 
 plots %>% 
   mapview(
