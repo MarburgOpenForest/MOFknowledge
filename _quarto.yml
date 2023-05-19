@@ -79,8 +79,8 @@ website:
 format:
   html:
     theme:
-      light: lumen
-      dark: [lumen, css/theme-dark.scss]
+      light: flatly
+      dark: [darkly]
     code-background: true
     code-copy: true
     css: css/styles.css
