@@ -79,8 +79,8 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: [darkly]
+      light: [flatly, css/nav.scss]
+      dark: [darkly, css/theme-dark.scss]
     code-background: true
     code-copy: true
     css: css/styles.css
