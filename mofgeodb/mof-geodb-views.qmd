@@ -7,7 +7,6 @@ date: '2021-12-10'
 description: 'Views are used to get a defined subset and collection of data from different relations.'
 title-block-banner: ../images/DJI_0071.JPG
 title-block-banner-color: "white"
-
 ---
 
 

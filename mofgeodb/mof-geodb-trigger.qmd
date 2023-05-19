@@ -8,6 +8,7 @@ image: ''
 toc: true
 title-block-banner: true
 title-block-banner-color: "white"
+
 ---
 # All custom made triggers in the MOFgeoDB
 Triggers run automatically before or after a specific command is executed on the database. They are absolutely necessary to keep the database running. There are many more triggers which are created automatically by spatialite to keep the geometries consistent. Please remember:
