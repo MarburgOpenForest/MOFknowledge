@@ -35,7 +35,7 @@ background-repeat: no-repeat;
 
 <div class="container">
  
-  <img src="/images/wieseBauwagen.png" alt="Snow" style="height:90%;">
+  <img src="/images/wieseBauwagen.png" alt="Snow" style="height:80%;">
   <div class="bottom-left">This page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest  into a knowledge base.</div>
 </div>
 
