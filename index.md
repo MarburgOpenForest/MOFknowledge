@@ -16,7 +16,7 @@ comments: false
 background-size: cover;
 background-repeat: no-repeat;
   position: relative;
-  text-align: left;
+  text-align: center;
   color: white;
 }
 .bottom-left {
@@ -27,6 +27,7 @@ background-repeat: no-repeat;
   padding-top: 5px;
   right: 95px;
   padding-bottom: 5px;
+  text-align: left;
   background: rgba(0,0,0,0.5);
 }
 
