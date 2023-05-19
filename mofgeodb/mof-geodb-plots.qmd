@@ -4,13 +4,9 @@ author: goettlic
 date: '2021-12-10'
 subtitle: ''
 description: 'Various forest structural plot designs in the MOF'
-categories:
-  - database
-  - Survey
-  - Analysis
-  - experiment
-  - data
+
 title-block-banner: ../images/DJI_0264.JPG
+title-block-banner-color: "black"
 ---
 
 

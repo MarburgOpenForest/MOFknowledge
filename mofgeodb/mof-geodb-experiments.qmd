@@ -2,16 +2,14 @@
 title: Experiments
 author: goettlic
 date: '2021-12-05'
-categories:
-  - Analysis
-  - Survey
-  - data
-  - experiment
+
 subtitle: ''
 description: ''
 image: 'img/DJI_0283.JPG'
 toc: true
 title-block-banner: ../images/DJI_0283.JPG
+title-block-banner-color: "#D5D5ED"
+
 ---
 # Experimentierplot
 Plot in Abt. 

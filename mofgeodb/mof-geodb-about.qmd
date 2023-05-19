@@ -7,11 +7,9 @@ date: '2021-12-04'
 bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 link-citations: true
-categories:
-  - mofgeodb
-  - database
-  - data
+
 title-block-banner: ../images/DJI_0071.JPG
+title-block-banner-color: "white"
 ---
 
 

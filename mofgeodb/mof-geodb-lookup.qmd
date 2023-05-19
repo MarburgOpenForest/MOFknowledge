@@ -4,10 +4,8 @@ author: goettlic
 date: '2021-12-10'
 subtitle: ''
 description: 'All lookup tables of the MOFgeoDB'
-categories:
-  - database
-  - mofgeodb
 title-block-banner: true
+title-block-banner-color: white
 ---
 # Lookup Tables
 

@@ -3,13 +3,11 @@ title: Data Collecting
 author: goettlic
 date: '2021-12-05'
 
-categories:
-  - Survey
-  - data
 subtitle: ''
 description: ''
 toc: true
 title-block-banner: ../images/DJI_0125.JPG
+title-block-banner-color: "black"
 ---
 
 
