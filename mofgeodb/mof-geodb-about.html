@@ -370,14 +370,14 @@ background-size: cover;
 <figcaption class="figure-caption">Marker on tree as <code>tree_id</code>, here b00930</figcaption>
 </figure>
 </div>
-<p>Geolocation is possible via a direct measurement of coordinates (usually using some sort of GNSS or terrestrial survey) or the determination via a topopoint using angle and distance as polar coordinates. <a href="../2021-12-09-triggers/">Triggers</a> calculate the coordinates on insert and update of relevant items.</p>
+<p>Geolocation is possible via a direct measurement of coordinates (usually using some sort of GNSS or terrestrial survey) or the determination via a topopoint using angle and distance as polar coordinates. <a href="../mofgeodb/mof-geodb-trigger.html">Triggers</a> calculate the coordinates on insert and update of relevant items.</p>
 <p>Following items can be additionally stored via the corresponding tables using the referencing <code>tree_id</code> and are dependent on time:</p>
 <ul>
 <li>general parameters
 <ul>
-<li>diameter: default breast height 1.3 m, <a href="../2021-12-09-triggers/">triggers</a> calculation of perimeter or diameter on circle</li>
+<li>diameter: default breast height 1.3 m, <a href="../mofgeodb/mof-geodb-trigger.html">triggers</a> calculation of perimeter or diameter on circle</li>
 <li>height: method is free text</li>
-<li>state: looking up tree state via <code>state_id</code> as shown in table <a href="../2021-12-10-lookup-tables/">lut_tree_state</a>.</li>
+<li>state: looking up tree state via <code>state_id</code> as shown in table <a href="../mofgeodb/mof-geodb-lookup.html">lut_tree_state</a>.</li>
 <li>social position: after <span class="citation" data-cites="eichhorn_part_2020">Eichhorn et al. (<a href="#ref-eichhorn_part_2020" role="doc-biblioref">2020</a>)</span> p.11</li>
 <li>vitality: after <span class="citation" data-cites="roloff_baumkronen_2001">Roloff (<a href="#ref-roloff_baumkronen_2001" role="doc-biblioref">2001</a>)</span></li>
 <li>habitat: multiple micro-habitats per tree after <span class="citation" data-cites="larrieu_tree_2018-1">Larrieu et al. (<a href="#ref-larrieu_tree_2018-1" role="doc-biblioref">2018</a>)</span></li>
@@ -398,7 +398,7 @@ background-size: cover;
 </section>
 <section id="plots" class="level3">
 <h3 class="anchored" data-anchor-id="plots">Plots</h3>
-<p>There are different type of survey plots (see also <a href="../2021-12-10-lookup-tables/"><code>lut_plottype</code></a>):</p>
+<p>There are different type of survey plots (see also <a href="../mofgeodb/mof-geodb-lookup.html"><code>lut_plottype</code></a>):</p>
 <ul>
 <li>forest structure <strong>fs</strong></li>
 <li>exclosure plot <strong>exc</strong></li>
@@ -409,17 +409,22 @@ background-size: cover;
 <li>subplot <strong>sub</strong></li>
 </ul>
 <p>Most common is the fs-plot for forest structure survey. Most of the plots get their geolocation from a fixed benchmark in the field (see figure @ref(fig:benchmark-fig)) documented in <code>topopoint</code>.</p>
-<p>(images/benchmark.png){width=“75%”}</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/benchmark.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Benchmarker</figcaption>
+</figure>
+</div>
 <p>The <code>plot_diary</code>can be used to document surveys on a plot linking specific actions (<code>lut_action</code>) to the desired plot and time. Automatic generation of subplots are possible and is implemented using triggers for the exclosure plot design. Triggers also manage the insertion, update and deletion of topopoints and plots.</p>
-<p>All plottypes are documented in the post <a href="../2021-12-10-plots/">Plots</a>.</p>
+<p>All plottypes are documented in the post <a href="../mofgeodb/mof-geodb-plots.html">Plots</a>.</p>
 </section>
 <section id="views" class="level3">
 <h3 class="anchored" data-anchor-id="views">Views</h3>
-<p>Views are created in the database to collect data from different tables for various reasons. It is a very convenient way to work with just one table for further analysis or visualizations. It insures the use of the desired data and has the capability to generate new fields like statistical parameters. All generated views are discussed in an special <a href="../2021-12-10-views/">post</a>.</p>
+<p>Views are created in the database to collect data from different tables for various reasons. It is a very convenient way to work with just one table for further analysis or visualizations. It insures the use of the desired data and has the capability to generate new fields like statistical parameters. All generated views are discussed in an special <a href="../mofgeodb/mof-geodb-views.html">post</a>.</p>
 </section>
 <section id="lookup-tables" class="level3">
 <h3 class="anchored" data-anchor-id="lookup-tables">Lookup Tables</h3>
-<p>Lookup tables just serve the idea to connect recurring items using a primary key. All lookup tables are documented in a separate <a href="../2021-12-10-lookup-tables/">post</a>.</p>
+<p>Lookup tables just serve the idea to connect recurring items using a primary key. All lookup tables are documented in a separate <a href="../mofgeodb/mof-geodb-lookup.html">post</a>.</p>
 </section>
 </section>
 <section id="auxiliary-data" class="level1">
