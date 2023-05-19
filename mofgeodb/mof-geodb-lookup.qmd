@@ -5,7 +5,7 @@ description: 'All lookup tables of the MOFgeoDB'
 author: D. Göttlicher
 date: '2021-12-04'
 date-format: "DD.MM.YYYY"
-title-block-banner: true
+title-block-banner: ../images/diffussion-sp.jpg
 title-block-banner-color: white
 ---
 ```{r setup, include=FALSE}
