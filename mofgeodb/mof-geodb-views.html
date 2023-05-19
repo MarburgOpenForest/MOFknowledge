@@ -317,13 +317,15 @@ background-size: cover;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#time-dependent-data" id="toc-time-dependent-data" class="nav-link active" data-scroll-target="#time-dependent-data">Time dependent data</a></li>
+  <li><a href="#time-dependent-data" id="toc-time-dependent-data" class="nav-link active" data-scroll-target="#time-dependent-data">Time dependent data</a>
+  <ul class="collapse">
   <li><a href="#all-trees-with-actual-parameters" id="toc-all-trees-with-actual-parameters" class="nav-link" data-scroll-target="#all-trees-with-actual-parameters">All trees with actual parameters:</a></li>
   <li><a href="#dead-trees" id="toc-dead-trees" class="nav-link" data-scroll-target="#dead-trees">Dead trees</a></li>
   <li><a href="#tree-history" id="toc-tree-history" class="nav-link" data-scroll-target="#tree-history">Tree history</a></li>
   <li><a href="#special-trees" id="toc-special-trees" class="nav-link" data-scroll-target="#special-trees">Special trees</a></li>
   <li><a href="#herblayer" id="toc-herblayer" class="nav-link" data-scroll-target="#herblayer">Herblayer</a></li>
   <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/MarburgOpenForest/MOFknowledge/edit/main/mofgeodb/mof-geodb-views.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/MarburgOpenForest/MOFknowledge/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -333,9 +335,9 @@ background-size: cover;
 
 
 
-<p>Views are used to get a defined subset and collection of data from different relations. All views are nemed with a prefix <code>vw_</code>.</p>
-<section id="time-dependent-data" class="level3">
-<h3 class="anchored" data-anchor-id="time-dependent-data">Time dependent data</h3>
+<p>Views are used to get a defined subset and collection of data from different relations. All views are named with a prefix <code>vw_</code>.</p>
+<section id="time-dependent-data" class="level2">
+<h2 class="anchored" data-anchor-id="time-dependent-data">Time dependent data</h2>
 <p>For all time dependent data views on the actual dataset is implement to get a single 1:1 connection. For example the view on the <code>lut_tree_state</code> table:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> vw_actual_tree_state <span class="kw">AS</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="kw">id</span>,tree_id,creator_id, <span class="fu">max</span>(<span class="dt">date</span>) <span class="kw">AS</span> <span class="dt">date</span>, state_id, remarks <span class="kw">FROM</span> tree_state</span>
@@ -354,7 +356,6 @@ background-size: cover;
 <li>vw_actual_tree_vitality</li>
 </ul>
 <p><sup>1</sup>Views with concatenated datafield.</p>
-</section>
 <section id="all-trees-with-actual-parameters" class="level3">
 <h3 class="anchored" data-anchor-id="all-trees-with-actual-parameters">All trees with actual parameters:</h3>
 <p>All living trees with the actual parameters and additional information from the species list. Selection is done with the <code>state_id</code>. That is the view to visualize the active trees:</p>
@@ -482,6 +483,7 @@ background-size: cover;
 <p>For more information on the various plots see the <a href="https://marburgopenforest.github.io/MOFexplain/post/2021-12-10-plots/">plot section</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
