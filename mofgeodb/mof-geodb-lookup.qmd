@@ -1,0 +1,39 @@
+---
+title: Lookup Tables
+author: goettlic
+date: '2021-12-10'
+subtitle: ''
+description: 'All lookup tables of the MOFgeoDB'
+categories:
+  - database
+  - mofgeodb
+
+---
+# Lookup Tables
+
+## lut_plottype
+
+```{r echo=TRUE}
+library(DBI)
+library(DT)
+temp <- tempfile()
+download.file("https://github.com/MarburgOpenForest/MOFGeoDB/blob/master/MOFgeoDB.sqlite?raw=true", temp)
+
+db = dbConnect(RSQLite::SQLite(), dbname =temp)
+
+DBI::dbReadTable(db, "lut_plottype") %>%
+  DT::datatable(options = list(dom = 't'))
+```
+
+## lut_tree_state
+
+```{r echo=TRUE}
+DBI::dbReadTable(db, "lut_tree_state") %>%
+  DT::datatable(options = list(dom = 't', paging = FALSE))
+```
+
+
+
+```{r echo=TRUE}
+DBI::dbDisconnect(db)
+```

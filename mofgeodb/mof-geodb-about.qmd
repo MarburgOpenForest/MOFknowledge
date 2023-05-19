@@ -7,6 +7,11 @@ date: '2021-12-04'
 bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 link-citations: true
+categories:
+  - mofgeodb
+  - database
+  - data
+
 ---
 ![](../images/DJI_0071.JPG){width="75%"}
 
