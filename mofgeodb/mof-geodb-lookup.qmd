@@ -8,6 +8,12 @@ date-format: "DD.MM.YYYY"
 title-block-banner: true
 title-block-banner-color: white
 ---
+```{r setup, include=FALSE}
+
+library(rmarkdown)
+```
+
+
 # Lookup Tables
 
 ## lut_plottype
