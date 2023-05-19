@@ -39,14 +39,14 @@ Trees are measured as single individiums from a diameter of 7 cm. All trees have
 
 ![Marker on tree as `tree_id`, here b00930](images/tree-marker.png){width="75%"}
 
-Geolocation is possible via a direct measurement of coordinates (usually using some sort of GNSS or terrestrial survey) or the determination via a topopoint using angle and distance as polar coordinates. [Triggers](../2021-12-09-triggers/) calculate the coordinates on insert and update of relevant items.
+Geolocation is possible via a direct measurement of coordinates (usually using some sort of GNSS or terrestrial survey) or the determination via a topopoint using angle and distance as polar coordinates. [Triggers](mof-geodb-trigger.qmd) calculate the coordinates on insert and update of relevant items.
 
 Following items can be additionally stored via the corresponding tables using the referencing `tree_id` and are dependent on time:
 
 * general parameters
-  * diameter: default breast height 1.3 m, [triggers](../2021-12-09-triggers/) calculation of perimeter or diameter on circle
+  * diameter: default breast height 1.3 m, [triggers](mof-geodb-trigger.qmd) calculation of perimeter or diameter on circle
   * height: method is free text
-  * state: looking up tree state via `state_id` as shown in table [lut_tree_state](../2021-12-10-lookup-tables/).
+  * state: looking up tree state via `state_id` as shown in table [lut_tree_state](mof-geodb-lookup.qmd).
   * social position: after @eichhorn_part_2020 p.11
   * vitality: after @roloff_baumkronen_2001
   * habitat: multiple micro-habitats per tree after @larrieu_tree_2018-1
@@ -60,7 +60,7 @@ Following items can be additionally stored via the corresponding tables using th
   * decomposition: decomposition rate for deadwood after @schwill_handbuch_2016 p.10
   
 ### Plots
-There are different type of survey plots (see also [`lut_plottype`](../2021-12-10-lookup-tables/)):
+There are different type of survey plots (see also [`lut_plottype`](mof-geodb-lookup.qmd)):
 
 * forest structure **fs**
 * exclosure plot **exc**
@@ -72,17 +72,17 @@ There are different type of survey plots (see also [`lut_plottype`](../2021-12-1
 
 Most common is the fs-plot for forest structure survey. Most of the plots get their geolocation from a fixed benchmark in the field (see figure \@ref(fig:benchmark-fig)) documented in `topopoint`.
 
-(images/benchmark.png){width="75%"}
+![Benchmarker](images/benchmark.png){width="75%"}
 
 The `plot_diary`can be used to document surveys on a plot linking specific actions (`lut_action`) to the desired plot and time. Automatic generation of subplots are possible and is implemented using triggers for the exclosure plot design. Triggers also manage the insertion, update and deletion of topopoints and plots.
 
-All plottypes are documented in the post [Plots](../2021-12-10-plots/).
+All plottypes are documented in the post [Plots](mof-geodb-plots.qmd).
 
 ### Views
-Views are created in the database to collect data from different tables for various reasons. It is a very convenient way to work with just one table for further analysis or visualizations. It insures the use of the desired data and has the capability to generate new fields like statistical parameters. All generated views are discussed in an special [post](../2021-12-10-views/).
+Views are created in the database to collect data from different tables for various reasons. It is a very convenient way to work with just one table for further analysis or visualizations. It insures the use of the desired data and has the capability to generate new fields like statistical parameters. All generated views are discussed in an special [post](mof-geodb-views.qmd).
 
 ### Lookup Tables
-Lookup tables just serve the idea to connect recurring items using a primary key. All lookup tables are documented in a separate [post](../2021-12-10-lookup-tables/).
+Lookup tables just serve the idea to connect recurring items using a primary key. All lookup tables are documented in a separate [post](mof-geodb-lookup.qmd).
 
 # Auxiliary Data
 

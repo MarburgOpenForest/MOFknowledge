@@ -124,7 +124,7 @@ Left JOIN (SELECT * FROM "vw_actual_tree_diameter" WHERE measurement_height = 1.
 JOIN vw_actual_tree_habitat AS e USING (tree_id)
 ORDER BY "a"."tree_id";
 ```
-More information on the special investigations can be found under the [Analysis section](https://marburgopenforest.github.io/MOFexplain/categories/analysis/)
+More information on the special investigations can be found under the [Analysis section](mof-geodb-analysis.qmd)
 
 ### Herblayer
 To get the species list for the herblayer following view is established:
