@@ -7,20 +7,27 @@ twitter-card:
   description: "Most of the time, data matters more than the model. But what is reality without model?"
   image: /images/wieseBauwagen.png
 title-block-banner: images/grubenwiese-sp.jpg
+title-block-banner-color: "white"
 comments: false
 ---
 
 <style>
 .container {
+background-size: cover;
+background-repeat: no-repeat;
   position: relative;
   text-align: center;
   color: white;
 }
 .bottom-left {
-  color: black;
+  color: white;
   position: absolute;
-  bottom: 25px;
-  left: 8px;
+  bottom: 1px;
+  left: 95px;
+  padding-top: 5px;
+  right: 95px;
+  padding-bottom: 5px;
+  background: rgba(0,0,0,0.5);
 }
 
 </style>
@@ -28,11 +35,7 @@ comments: false
 
 <div class="container">
  
-  <img src="/images/wieseBauwagen.png" alt="Snow" style="width:100%;">
-  
-   <div class="bottom-left"><H3>Core Unit Grubenwiese</H3></div>
+  <img src="/images/wieseBauwagen.png" alt="Snow" style="height:90%;">
+  <div class="bottom-left">This page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest  into a knowledge base.</div>
 </div>
 
-
-
-This page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest  into a knowledge base.
