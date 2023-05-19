@@ -12,9 +12,9 @@ title-block-banner-color: "white"
 
 
 
-Views are used to get a defined subset and collection of data from different relations. All views are nemed with a prefix `vw_`.
+Views are used to get a defined subset and collection of data from different relations. All views are named with a prefix `vw_`.
 
-### Time dependent data
+## Time dependent data
 For all time dependent data views on the actual dataset is implement to get a single 1:1 connection. For example the view on the `lut_tree_state` table:
 ```sql
 CREATE VIEW vw_actual_tree_state AS
