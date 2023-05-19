@@ -15,11 +15,11 @@ website:
     location: navbar
     type: textbox
   page-footer: "Faculty of Geography (2018-2023)" 
-  # twitter-card:
-  #   creator: "@yxz"
-  # comments:
-  #   utterances:
-  #     repo: yourgithubname/yourreponame
+  twitter-card:
+    creator: "@ycreuden"
+  comments:
+    utterances:
+      repo: MarburgOpenForest/MOFknowledge
   navbar:
     logo: /images/logo.jpg
     left:
