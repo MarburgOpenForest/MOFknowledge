@@ -64,6 +64,8 @@ website:
           - mofgeodb/mof-geodb-trigger.qmd
           - mofgeodb/mof-geodb-experiments.qmd
           - mofgeodb/mof-geodb-datacollect.qmd
+          - mofgeodb/mof-geodb-analysis.qmd
+          - mofgeodb/mof-geodb-lit.qmd
           
           # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-fieldwork/
           #   text: uav/Flight Planning
