@@ -1,12 +1,10 @@
 ---
 title: Literature, Manuals and other Sources
-author: goettlic
-date: '2021-12-07'
-
 subtitle: ''
 description: ''
-image: ''
-toc: true
+author: D. Göttlicher
+date: '2021-12-09'
+date-format: "DD.MM.YYYY"
 title-block-banner: true
 title-block-banner-color: "white"
 bibliography: ../MOFbib.bib

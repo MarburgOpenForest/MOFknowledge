@@ -1,12 +1,10 @@
 ---
 title: Analysis
-author: goettlic
-date: '2021-12-05'
-
 subtitle: ''
 description: 'Analysis approaches with data of the MOF'
-
-toc: true
+author: D. Göttlicher
+date: '2021-12-05'
+date-format: "DD.MM.YYYY"
 title-block-banner: ../images/DJI_0116.JPG
 title-block-banner-color: "white"
 ---

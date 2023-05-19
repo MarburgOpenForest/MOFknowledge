@@ -1,11 +1,10 @@
 ---
 title: Data Collecting
-author: goettlic
-date: '2021-12-05'
-
 subtitle: ''
 description: ''
-toc: true
+author: D. Göttlicher
+date: '2021-12-05'
+date-format: "DD.MM.YYYY"
 title-block-banner: ../images/DJI_0125.JPG
 title-block-banner-color: "black"
 ---

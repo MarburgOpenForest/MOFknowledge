@@ -1,10 +1,10 @@
 ---
 title: 'Views'
 subtitle: ''
-
-author: goettlic
-date: '2021-12-10'
 description: 'Views are used to get a defined subset and collection of data from different relations.'
+author: D. Göttlicher
+date: '2021-12-10'
+date-format: "DD.MM.YYYY"
 title-block-banner: ../images/DJI_0071.JPG
 title-block-banner-color: "white"
 ---

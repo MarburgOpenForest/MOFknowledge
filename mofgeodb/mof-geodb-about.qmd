@@ -2,12 +2,12 @@
 title: 'Description MOFgeoDB'
 subtitle: ''
 description: 'General description of the spatial database MOFgeoDB'
-author: goettlic
-date: '2021-12-04'
+author: D. Göttlicher
+date: '2021-12-10'
+date-format: "DD.MM.YYYY"
 bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 link-citations: true
-
 title-block-banner: ../images/DJI_0071.JPG
 title-block-banner-color: "white"
 ---

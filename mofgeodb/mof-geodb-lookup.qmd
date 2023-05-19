@@ -1,9 +1,10 @@
 ---
 title: Lookup Tables
-author: goettlic
-date: '2021-12-10'
 subtitle: ''
 description: 'All lookup tables of the MOFgeoDB'
+author: D. Göttlicher
+date: '2021-12-04'
+date-format: "DD.MM.YYYY"
 title-block-banner: true
 title-block-banner-color: white
 ---

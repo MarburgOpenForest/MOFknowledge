@@ -1,11 +1,10 @@
 ---
 title: Triggers
-author: goettlic
-date: '2021-12-09'
-subtitle: ''
+subtitle: ""
 description: 'All custom made triggers in the MOFgeoDB'
-image: ''
-toc: true
+author: D. Göttlicher
+date: '2021-12-09'
+date-format: "DD.MM.YYYY"
 title-block-banner: true
 title-block-banner-color: "white"
 
