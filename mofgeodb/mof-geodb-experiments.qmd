@@ -11,7 +11,7 @@ subtitle: ''
 description: ''
 image: 'img/DJI_0283.JPG'
 toc: true
-
+title-block-banner: ../images/DJI_0283.JPG
 ---
 # Experimentierplot
 Plot in Abt. 

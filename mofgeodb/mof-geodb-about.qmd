@@ -11,9 +11,10 @@ categories:
   - mofgeodb
   - database
   - data
-
+title-block-banner: ../images/DJI_0071.JPG
 ---
-![](../images/DJI_0071.JPG){width="75%"}
+
+
 
 # General Setting
 

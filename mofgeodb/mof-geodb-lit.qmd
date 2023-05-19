@@ -9,7 +9,7 @@ subtitle: ''
 description: ''
 image: ''
 toc: true
-
+title-block-banner: true
 bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 nocite: '@*' # alle Einträge aus LiteraturDB

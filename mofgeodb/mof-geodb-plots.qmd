@@ -10,10 +10,10 @@ categories:
   - Analysis
   - experiment
   - data
-
+title-block-banner: ../images/DJI_0264.JPG
 ---
 
-![](../images/DJI_0264.JPG){width="75%"}
+
 
 # Survey Plots
 

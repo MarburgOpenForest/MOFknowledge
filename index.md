@@ -6,7 +6,7 @@ open-graph:
 twitter-card:
   description: "Most of the time, data matters more than the model. But what is reality without model?"
   image: /images/wieseBauwagen.png
-
+title-block-banner: images/grubenwiese-sp.jpg
 comments: false
 ---
 
@@ -24,6 +24,8 @@ comments: false
 }
 
 </style>
+
+
 <div class="container">
  
   <img src="/images/wieseBauwagen.png" alt="Snow" style="width:100%;">

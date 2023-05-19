@@ -9,9 +9,9 @@ categories:
 subtitle: ''
 description: ''
 toc: true
-
+title-block-banner: ../images/DJI_0125.JPG
 ---
-![](../images/DJI_0125.JPG)
+
 
 # General Situation
 Collecting data happens in various ways:

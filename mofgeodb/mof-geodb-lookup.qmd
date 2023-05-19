@@ -7,7 +7,7 @@ description: 'All lookup tables of the MOFgeoDB'
 categories:
   - database
   - mofgeodb
-
+title-block-banner: true
 ---
 # Lookup Tables
 

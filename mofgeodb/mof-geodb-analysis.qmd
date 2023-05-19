@@ -11,8 +11,10 @@ subtitle: ''
 description: 'Analysis approaches with data of the MOF'
 
 toc: true
+title-block-banner: ../images/DJI_0116.JPG
 ---
-![](../images/DJI_0116.JPG)
+
+
 # General Situation
 
 Analysis of data happens at different stages:
