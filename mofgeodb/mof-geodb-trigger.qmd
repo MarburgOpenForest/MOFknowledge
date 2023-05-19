@@ -5,8 +5,8 @@ description: 'All custom made triggers in the MOFgeoDB'
 author: D. Göttlicher
 date: '2021-12-09'
 date-format: "DD.MM.YYYY"
-title-block-banner: true
-title-block-banner-color: "white"
+title-block-banner: ../images/calibration-sp.jpg
+title-block-banner-color: "black"
 
 ---
 # All custom made triggers in the MOFgeoDB

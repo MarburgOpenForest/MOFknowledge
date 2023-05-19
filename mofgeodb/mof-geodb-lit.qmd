@@ -5,8 +5,8 @@ description: ''
 author: D. Göttlicher
 date: '2021-12-09'
 date-format: "DD.MM.YYYY"
-title-block-banner: true
-title-block-banner-color: "white"
+title-block-banner: ../images/head-assign.jpg
+title-block-banner-color: "black"
 bibliography: ../MOFbib.bib
 csl: ../journal-of-biogeography.csl
 nocite: '@*' # alle Einträge aus LiteraturDB
