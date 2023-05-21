@@ -13,30 +13,15 @@ comments: false
 
 <style>
 .container {
-background-size: cover;
+background-image: url(images/DJI_0127.JPG);
+width: 850px;
+height: 600px;
+background-size: contain;
 background-repeat: no-repeat;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.bottom-left {
-  color: white;
-  position: absolute;
-  bottom: 1px;
-  left: 95px;
-  padding-top: 5px;
-  right: 95px;
-  padding-bottom: 5px;
-  text-align: left;
-  background: rgba(0,0,0,0.5);
-}
 
+}
 </style>
 
 
-<div class="container">
- 
-  <img src="/images/wieseBauwagen.png" alt="Snow" style="height:80%;">
-  <div class="bottom-left">This page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest  into a knowledge base.</div>
-</div>
+<div class="container"> </div>
 
