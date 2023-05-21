@@ -9,6 +9,7 @@ twitter-card:
 title-block-banner: images/banner.JPG
 title-block-banner-color: "white"
 comments: false
+fig-responsive: true
 ---
 
 <style>
