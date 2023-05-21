@@ -12,17 +12,4 @@ comments: false
 fig-responsive: true
 ---
 
-<style>
-.container {
-background-image: url(images/DJI_0127.JPG);
-width: 850px;
-height: 600px;
-background-size: contain;
-background-repeat: no-repeat;
-
-}
-</style>
-
-
-<div class="container"> </div>
-
+![](images/DJI_0127.JPG){max-width="100%"}
