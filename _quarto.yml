@@ -8,8 +8,8 @@ website:
   open-graph: true
   page-navigation: true  
   title: "Marburg Open Forest"
-  site-url: https://MarburgOpenForest.github.io
-  repo-url: https://github.com/MarburgOpenForest/MOFknowledge
+  site-url: https://marburgopengorest.github.io
+  repo-url: https://github.com/marburgopenforest/MOFknowledge
   repo-actions: [edit, issue]
   search: 
     location: navbar
