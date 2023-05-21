@@ -6,11 +6,7 @@ execute:
 
 website:
   open-graph: true
-  description: "Most of the time, data matters more than the model. But what is reality without model?"
-  image: /images/DJI_0127.JPG  
   page-navigation: true  
-  twitter-card:
-    creator: "@creuden"  
   title: "Marburg Open Forest"
   site-url: https://MarburgOpenForest.github.io/
   repo-url: https://github.com/MarburgOpenForest/MOFknowledge
