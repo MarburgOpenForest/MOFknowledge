@@ -7,6 +7,8 @@ execute:
 website:
   open-graph: true
   page-navigation: true  
+  twitter-card:
+    creator: "@creuden"  
   title: "Marburg Open Forest"
   site-url: https://MarburgOpenForest.github.io/
   repo-url: https://github.com/MarburgOpenForest/MOFknowledge
@@ -15,8 +17,6 @@ website:
     location: navbar
     type: textbox
   page-footer: "Faculty of Geography (2018-2023)" 
-  twitter-card:
-    creator: "@creuden"
   comments:
     utterances:
       repo: MarburgOpenForest/MOFknowledge
