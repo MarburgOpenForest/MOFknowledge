@@ -72,10 +72,10 @@ website:
           # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-fieldwork/
           #   text: uav/Flight Planning
       - text: "---"
-      # - section: "topic2"
-      #   contents:
-      #     - topic2/topic2-index.qmd
-          
+      - section: "UAV"
+        contents:
+          - href: http://137.248.191.201:5000/r/mof
+            text: "droneDB file server"   
 
 #format: dokuwiki
 format:
