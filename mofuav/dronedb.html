@@ -298,7 +298,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#installation-and-tweaks" id="toc-installation-and-tweaks" class="nav-link" data-scroll-target="#installation-and-tweaks">Installation and tweaks</a></li>
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">Structure</a></li>
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder Structure</a></li>
+  <li><a href="#personal-settings" id="toc-personal-settings" class="nav-link" data-scroll-target="#personal-settings">Personal Settings</a></li>
   <li><a href="#api-schnittstelle" id="toc-api-schnittstelle" class="nav-link" data-scroll-target="#api-schnittstelle">API Schnittstelle</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/marburgopenforest/MOFknowledge/edit/main/mofuav/dronedb.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/marburgopenforest/MOFknowledge/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -347,8 +348,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>For the webpack you need <a href="https://nodejs.org/download/release/v14.18.3/">NodeJS 14+</a></li>
 </ul>
 </section>
-<section id="structure" class="level2">
-<h2 class="anchored" data-anchor-id="structure">Structure</h2>
+<section id="folder-structure" class="level2">
+<h2 class="anchored" data-anchor-id="folder-structure">Folder Structure</h2>
 <p>The <code>droneDB</code> server runs in both installations in the <code>production</code> branch of the <code>docker</code> subdirectory and has a default structure that looks like this. The <code>datasets</code> directory is the default for the directory that contains the data that will be served.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">creu@deep:~/drone-db-generic/Registry/docker/production$</span> tree <span class="at">-d</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
@@ -507,6 +508,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>    <span class="ex">│&nbsp;&nbsp;</span>     └── scripts</span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> logs</span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="personal-settings" class="level2">
+<h2 class="anchored" data-anchor-id="personal-settings">Personal Settings</h2>
 <p>In order to be able to access the data not only locally, the following settings must be made. The easiest way is to edit the <code>appssettings.json</code> as follows:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"AppSettings"</span><span class="fu">:</span> <span class="fu">{</span></span>
