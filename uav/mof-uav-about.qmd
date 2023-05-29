@@ -1,12 +1,12 @@
 ---
-title: 'The MOF UAV-Campaign 2017-2022 '
+title: 'The MOF UAV-Campaign'
 subtitle: ''
 description: 'General description of the available drone data'
 author: C. Reudenbach
 date: '2023-05-28'
 date-format: "DD.MM.YYYY"
 title-block-banner: ../images/header_gis.jpg
-title-block-banner-color: "black"
+title-block-banner-color: "#E0E0DD"
 ---
 
 
