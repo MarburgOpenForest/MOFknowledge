@@ -1,5 +1,5 @@
 ---
-title: 'Description MOFgeoDB'
+title: 'The MOF UAV-Campaign 2017-2022 '
 subtitle: ''
 description: 'General description of the available drone data'
 author: C. Reudenbach
