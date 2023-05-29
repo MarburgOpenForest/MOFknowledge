@@ -20,7 +20,7 @@ For the source variant the following prerequisites are to be installed compellin
 * Before building registry ensure you have `ddblib` in your path, if not, download the [latest release](https://github.com/DroneDB/DroneDB/releases) and add it to `PATH`.
 * For the webpack you need [NodeJS 14+](https://nodejs.org/download/release/v14.18.3/)
 
-## Structure
+## Folder Structure
 
 The `droneDB` server runs in both installations in the `production` branch of the `docker` subdirectory and has a default structure that looks like this. The `datasets` directory is the default for the directory that contains the data that will be served.
 
@@ -184,6 +184,8 @@ creu@deep:~/drone-db-generic/Registry/docker/production$ tree -d
 
 
 ```
+
+## Personal Settings
 
 In order to be able to access the data not only locally, the following settings must be made. The easiest way is to edit the `appssettings.json` as follows:
 
