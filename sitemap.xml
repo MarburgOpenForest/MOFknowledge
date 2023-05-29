@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://marburgopengorest.github.io/mofuav/dronedb.html</loc>
+    <lastmod>2023-05-29T16:31:16.848Z</lastmod>
+  </url>
+  <url>
     <loc>https://marburgopengorest.github.io/base/about.html</loc>
-    <lastmod>2023-05-28T14:59:22.127Z</lastmod>
+    <lastmod>2023-05-29T16:31:18.157Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/base/impressum.html</loc>
-    <lastmod>2023-05-28T14:59:24.975Z</lastmod>
+    <lastmod>2023-05-29T16:31:19.609Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/base/faq.html</loc>
-    <lastmod>2023-05-28T14:59:25.355Z</lastmod>
+    <lastmod>2023-05-29T16:31:20.101Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/modules/en-git-module.html</loc>
-    <lastmod>2023-05-28T14:59:26.811Z</lastmod>
+    <lastmod>2023-05-29T16:31:22.021Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/modules/de-git-module.html</loc>
-    <lastmod>2023-05-28T14:59:28.207Z</lastmod>
+    <lastmod>2023-05-29T16:31:23.761Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/modules/slidelist.html</loc>
-    <lastmod>2023-05-28T14:59:28.675Z</lastmod>
+    <lastmod>2023-05-29T16:31:24.277Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/slides/slide1.html</loc>
-    <lastmod>2023-05-28T14:59:29.471Z</lastmod>
+    <lastmod>2023-05-29T16:31:25.173Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/slides/slidelist.html</loc>
-    <lastmod>2023-05-28T14:59:30.503Z</lastmod>
+    <lastmod>2023-05-29T16:31:26.525Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-lit.html</loc>
-    <lastmod>2023-05-28T14:59:31.415Z</lastmod>
+    <lastmod>2023-05-29T16:31:27.813Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-about.html</loc>
-    <lastmod>2023-05-28T14:59:32.527Z</lastmod>
+    <lastmod>2023-05-29T16:31:29.385Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-datacollect.html</loc>
-    <lastmod>2023-05-28T14:59:32.931Z</lastmod>
+    <lastmod>2023-05-29T16:31:29.933Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-lookup.html</loc>
-    <lastmod>2023-05-28T14:59:33.519Z</lastmod>
+    <lastmod>2023-05-29T16:31:30.653Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-plots.html</loc>
-    <lastmod>2023-05-28T14:59:34.151Z</lastmod>
+    <lastmod>2023-05-29T16:31:31.433Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-experiments.html</loc>
-    <lastmod>2023-05-28T14:59:34.559Z</lastmod>
+    <lastmod>2023-05-29T16:31:31.933Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-trigger.html</loc>
-    <lastmod>2023-05-28T14:59:35.319Z</lastmod>
+    <lastmod>2023-05-29T16:31:32.865Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-analysis.html</loc>
-    <lastmod>2023-05-28T14:59:35.719Z</lastmod>
+    <lastmod>2023-05-29T16:31:33.341Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/mofgeodb/mof-geodb-views.html</loc>
-    <lastmod>2023-05-28T14:59:36.251Z</lastmod>
+    <lastmod>2023-05-29T16:31:33.993Z</lastmod>
   </url>
   <url>
     <loc>https://marburgopengorest.github.io/index.html</loc>
-    <lastmod>2023-05-28T14:59:36.595Z</lastmod>
+    <lastmod>2023-05-29T16:31:34.401Z</lastmod>
   </url>
 </urlset>
