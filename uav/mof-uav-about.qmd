@@ -6,7 +6,7 @@ author: C. Reudenbach
 date: '2023-05-28'
 date-format: "DD.MM.YYYY"
 title-block-banner: ../images/header_gis.jpg
-title-block-banner-color: "white"
+title-block-banner-color: "black"
 ---
 
 
