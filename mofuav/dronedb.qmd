@@ -197,9 +197,9 @@ In order to be able to access the data not only locally, the following settings 
     "RegistryProvider": "Mysql",
     "HangfireProvider": "Mysql",
     "DefaultAdmin": {
-      "Email": "creuden@gmail.com",
-      "UserName": "admin",
-      "Password": "yourpw"
+      "Email": "your@e.mail",
+      "UserName": "your-admin-name",
+      "Password": "your-pw"
     },
     "StoragePath": "./data",
     "DatasetsPath": "./datasets",
@@ -208,7 +208,7 @@ In order to be able to access the data not only locally, the following settings 
     "UploadBatchTimeout": "01:00:00",
     "RandomDatasetNameLength": 16,
     "AuthCookieName": "jwtToken",
-    "ExternalUrlOverride": "http://137.248.191.201:5000",
+    "ExternalUrlOverride": "http://xxx.xxx.xxx.xxx:port-nummer",
     "ExternalAuthUrl": null,
     "CacheProvider": null,
     "EnableStorageLimiter": false,
@@ -220,9 +220,9 @@ In order to be able to access the data not only locally, the following settings 
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "IdentityConnection": "Server=db;Database=RegistryAuth;Uid=registry;Pwd=passwd02",
-    "RegistryConnection": "Server=db;Database=RegistryData;Uid=registry;Pwd=passwd02",
-    "HangfireConnection": "Server=db;Database=RegistryHangfire;Uid=registry;Pwd=passwd02;Allow User Variables=true"
+    "IdentityConnection": "Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1",
+    "RegistryConnection": "Server=db;Database=RegistryData;Uid=registry;Pwd=password1",
+    "HangfireConnection": "Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true"
   },
   "Serilog": {
     "LevelSwitches": {
@@ -284,7 +284,7 @@ Important are in particular:
 **Attention EXACTLY like this, i.e. with http:// and port specification**
 
 ``json
-    "ExternalUrlOverride": "http://137.248.191.201:5000",
+    "ExternalUrlOverride": "http://xxx.xxx.xxx.xxx:port-nummer",
 ```
 
 #### Storage Path
@@ -297,9 +297,9 @@ Important are in particular:
 #### Admin
 ```json
     "DefaultAdmin": {
-      "Email": "creuden@gmail.com",
-      "UserName": "admin",
-      "Password": "yourpw"
+      "Email": "your@e.mail",
+      "UserName": "your-admin-name",
+      "Password": "your-pw"
     },
 ```    
 #### Database Passwords
@@ -307,9 +307,9 @@ Important are in particular:
 ```json
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "IdentityConnection": "Server=db;Database=RegistryAuth;Uid=registry;Pwd=passwd02",
-    "RegistryConnection": "Server=db;Database=RegistryData;Uid=registry;Pwd=passwd02",
-    "HangfireConnection": "Server=db;Database=RegistryHangfire;Uid=registry;Pwd=passwd02;Allow User Variables=true"
+    "IdentityConnection": "Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1",
+    "RegistryConnection": "Server=db;Database=RegistryData;Uid=registry;Pwd=password1",
+    "HangfireConnection": "Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true"
   },
 ```
 
@@ -318,12 +318,12 @@ If you don`t want to edit in appsetting.json this can also be created at program
 ```bash
 #!/bin/bash
 
-export MYSQL_ROOT_PASSWORD="passwd01"
-export MYSQL_PASSWORD="passwd02"
-export REGISTRY_ADMIN_MAIL="creuden@gmail.com"
+export MYSQL_ROOT_PASSWORD="password0"
+export MYSQL_PASSWORD="password01"
+export REGISTRY_ADMIN_MAIL="your@e.mail"
 export REGISTRY_ADMIN_PASSWORD="your-pw"
 export REGISTRY_SECRET="e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z"
-export EXTERNAL_URL="http://137.248l191.201:5000"
+export EXTERNAL_URL="http://xxx.xxx.xxx.xxx:port-nummer"
 export CONTROL_SWITCH='$controlSwitch'
 
 if test -f ".env"; then
@@ -360,7 +360,7 @@ MYSQL_PASSWORD="default-mysql-password"
 REGISTRY_ADMIN_MAIL="test@test.it"
 REGISTRY_ADMIN_PASSWORD="password"
 REGISTRY_SECRET="longandrandomsecrettobegeneratedusingcryptographicallystrongrandomnumbergenerator"
-EXTERNAL_URL="http://137.248.191.201:5000"
+EXTERNAL_URL="http://xxx.xxx.xxx.xxx:port-nummer"
 CONTROL_SWITCH='$controlSwitch'
 ```
 
@@ -379,6 +379,6 @@ geany ~/.docker/config.json
 
 Mit Hilfe von von `swagger`  können die API-Befehle in einer GUI ausgeführt werden. So können zb. neue Nutzer angelegt werden.
 ```bash
-http://137.248.191.201:5000/swagger/index.html
+http://xxx.xxx.xxx.xxx:port-nummer/swagger/index.html
 ```
 
