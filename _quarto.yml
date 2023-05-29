@@ -76,7 +76,7 @@ website:
         contents:
           - href: http://137.248.191.201:5000/r/mof
             text: "Webserver droneDB"   
-          - mofuav/dronedb.qmd
+          - uav/mof-uav-about.qmd
    
 
 #format: dokuwiki
