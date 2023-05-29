@@ -517,9 +517,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"RegistryProvider"</span><span class="fu">:</span> <span class="st">"Mysql"</span><span class="fu">,</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"HangfireProvider"</span><span class="fu">:</span> <span class="st">"Mysql"</span><span class="fu">,</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"DefaultAdmin"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Email"</span><span class="fu">:</span> <span class="st">"creuden@gmail.com"</span><span class="fu">,</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"UserName"</span><span class="fu">:</span> <span class="st">"admin"</span><span class="fu">,</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Password"</span><span class="fu">:</span> <span class="st">"yourpw"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Email"</span><span class="fu">:</span> <span class="st">"your@e.mail"</span><span class="fu">,</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"UserName"</span><span class="fu">:</span> <span class="st">"your-admin-name"</span><span class="fu">,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Password"</span><span class="fu">:</span> <span class="st">"your-pw"</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"StoragePath"</span><span class="fu">:</span> <span class="st">"./data"</span><span class="fu">,</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"DatasetsPath"</span><span class="fu">:</span> <span class="st">"./datasets"</span><span class="fu">,</span></span>
@@ -528,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"UploadBatchTimeout"</span><span class="fu">:</span> <span class="st">"01:00:00"</span><span class="fu">,</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"RandomDatasetNameLength"</span><span class="fu">:</span> <span class="dv">16</span><span class="fu">,</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"AuthCookieName"</span><span class="fu">:</span> <span class="st">"jwtToken"</span><span class="fu">,</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ExternalUrlOverride"</span><span class="fu">:</span> <span class="st">"http://137.248.191.201:5000"</span><span class="fu">,</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ExternalUrlOverride"</span><span class="fu">:</span> <span class="st">"http://xxx.xxx.xxx.xxx:port-nummer"</span><span class="fu">,</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ExternalAuthUrl"</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"CacheProvider"</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"EnableStorageLimiter"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
@@ -540,9 +540,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"AllowedHosts"</span><span class="fu">:</span> <span class="st">"*"</span><span class="fu">,</span></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"ConnectionStrings"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"IdentityConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryAuth;Uid=registry;Pwd=passwd02"</span><span class="fu">,</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"RegistryConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryData;Uid=registry;Pwd=passwd02"</span><span class="fu">,</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"HangfireConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=passwd02;Allow User Variables=true"</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"IdentityConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1"</span><span class="fu">,</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"RegistryConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryData;Uid=registry;Pwd=password1"</span><span class="fu">,</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"HangfireConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true"</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Serilog"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"LevelSwitches"</span><span class="fu">:</span> <span class="fu">{</span></span>
@@ -600,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="external-url" class="level4">
 <h4 class="anchored" data-anchor-id="external-url">External URL</h4>
 <p><strong>Attention EXACTLY like this, i.e.&nbsp;with http:// and port specification</strong></p>
-<p>``json “ExternalUrlOverride”: “http://137.248.191.201:5000”,</p>
+<p>``json “ExternalUrlOverride”: “http://xxx.xxx.xxx.xxx:port-nummer”,</p>
 <pre><code>
 #### Storage Path
 
@@ -611,28 +611,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="admin" class="level4">
 <h4 class="anchored" data-anchor-id="admin">Admin</h4>
 <div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="er">"DefaultAdmin":</span> <span class="fu">{</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Email"</span><span class="fu">:</span> <span class="st">"creuden@gmail.com"</span><span class="fu">,</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"UserName"</span><span class="fu">:</span> <span class="st">"admin"</span><span class="fu">,</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Password"</span><span class="fu">:</span> <span class="st">"yourpw"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Email"</span><span class="fu">:</span> <span class="st">"your@e.mail"</span><span class="fu">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"UserName"</span><span class="fu">:</span> <span class="st">"your-admin-name"</span><span class="fu">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"Password"</span><span class="fu">:</span> <span class="st">"your-pw"</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="er">,</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="database-passwords" class="level4">
 <h4 class="anchored" data-anchor-id="database-passwords">Database Passwords</h4>
 <div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="er">"AllowedHosts":</span> <span class="er">"*",</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">"ConnectionStrings":</span> <span class="fu">{</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"IdentityConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryAuth;Uid=registry;Pwd=passwd02"</span><span class="fu">,</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"RegistryConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryData;Uid=registry;Pwd=passwd02"</span><span class="fu">,</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"HangfireConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=passwd02;Allow User Variables=true"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"IdentityConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1"</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"RegistryConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryData;Uid=registry;Pwd=password1"</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"HangfireConnection"</span><span class="fu">:</span> <span class="st">"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true"</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="er">,</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you don<code>t want to edit in appsetting.json this can also be created at program start with</code>run.sh`:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MYSQL_ROOT_PASSWORD</span><span class="op">=</span><span class="st">"passwd01"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MYSQL_PASSWORD</span><span class="op">=</span><span class="st">"passwd02"</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">REGISTRY_ADMIN_MAIL</span><span class="op">=</span><span class="st">"creuden@gmail.com"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MYSQL_ROOT_PASSWORD</span><span class="op">=</span><span class="st">"password0"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MYSQL_PASSWORD</span><span class="op">=</span><span class="st">"password01"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">REGISTRY_ADMIN_MAIL</span><span class="op">=</span><span class="st">"your@e.mail"</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">REGISTRY_ADMIN_PASSWORD</span><span class="op">=</span><span class="st">"your-pw"</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">REGISTRY_SECRET</span><span class="op">=</span><span class="st">"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z"</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">EXTERNAL_URL</span><span class="op">=</span><span class="st">"http://137.248l191.201:5000"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">EXTERNAL_URL</span><span class="op">=</span><span class="st">"http://xxx.xxx.xxx.xxx:port-nummer"</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CONTROL_SWITCH</span><span class="op">=</span><span class="st">'$controlSwitch'</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">test</span> <span class="at">-f</span> <span class="st">".env"</span><span class="kw">;</span> <span class="cf">then</span></span>
@@ -664,7 +664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="er">REGISTRY_ADMIN_MAIL="test@test.it"</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="er">REGISTRY_ADMIN_PASSWORD="password"</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="er">REGISTRY_SECRET="longandrandomsecrettobegeneratedusingcryptographicallystrongrandomnumbergenerator"</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="er">EXTERNAL_URL="http://137.248.191.201:5000"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="er">EXTERNAL_URL="http://xxx.xxx.xxx.xxx:port-nummer"</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="er">CONTROL_SWITCH='$controlSwitch'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Depending on the installation, the <code>s</code> must be deleted from the <code>"credsStore": "desktop"</code> entry in <code>~/.docker/config.json</code>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">geany</span> ~/.docker/config.json</span>
@@ -677,7 +677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="api-schnittstelle" class="level2">
 <h2 class="anchored" data-anchor-id="api-schnittstelle">API Schnittstelle</h2>
 <p>Mit Hilfe von von <code>swagger</code> können die API-Befehle in einer GUI ausgeführt werden. So können zb. neue Nutzer angelegt werden.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">http://137.248.191.201:5000/swagger/index.html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">http://xxx.xxx.xxx.xxx:port-nummer/swagger/index.html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
