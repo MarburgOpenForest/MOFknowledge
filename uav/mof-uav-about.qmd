@@ -1,22 +1,6 @@
 ---
 title: 'Description MOFgeoDB'
 subtitle: ''
-description: 'General description of the spatial database MOFgeoDB'
-author: D. Göttlicher
-date: '2021-12-10'
-date-format: "DD.MM.YYYY"
-bibliography: ../references/MOFbib.bib
-csl: ../references/journal-of-biogeography.csl
-link-citations: true
-title-block-banner: ../images/DJI_0071.JPG
-title-block-banner-color: "white"
----
-
-
-
----
-title: 'Description MOFgeoDB'
-subtitle: ''
 description: 'General description of the available drone data'
 author: C. Reudenbach
 date: '2023-05-28'
