@@ -24,12 +24,12 @@ website:
     - icon: question-square-fill
       text: FAQ
       href: base/faq.qmd
-    - icon: journals
-      text: Self-study
-      href: modules/slidelist.qmd
-    - icon: file-slides-fill
-      text: Slides
-      href: slides/slidelist.qmd
+  #  - icon: journals
+  #    text: Self-study
+  #    href: modules/slidelist.qmd
+  #  - icon: file-slides-fill
+  #    text: Slides
+   #   href: slides/slidelist.qmd
     # - icon: check2-square
     #   text: Test It
     #   href: assessment/slidelist.qmd
@@ -55,7 +55,7 @@ website:
       - section: "Welcome"
         contents:
           - index.md
-          - base/about.qmd
+        #  - base/about.qmd
       - text: "---"
       - section: "MOFgeoDB"
         contents:
