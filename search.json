@@ -26,7 +26,7 @@
     "text": "Since 2016, numerous aerial surveys have been carried out in Marburg University Forest using various drones and sensors. The focus has been on low-budget devices, i.e. commercially available consumer drones with RGB cameras or action cameras such as GoPro or gitup/mapir. Self-built copters and the 3DR Solo served as the copter base. DJI consumer products and enterprise platforms were also increasingly used. In addition to the RGB recordings, numerous flights were carried out with the Altum Sensor and the L1 Zenmuse and currently with the Mavic 3 Multispectral Enterprise. The processed data and metadata as well as selected products such as point clouds and surface models are available on the MOF droneDB web server.",
     "crumbs": [
       "FAQ",
-      "UAV",
+      "WebGIS UAV Data",
       "The MOF UAV-Campaign"
     ]
   },
