@@ -16,12 +16,7 @@
     "href": "base/about.html",
     "title": "About this site",
     "section": "",
-    "text": "About this site\nThis page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest into a knowledge base.\nAlthough the web space is topic-centered any keyword can be searched using the full text search.\nThe creation of new pages, the editing of existing pages can be triggered directly via the right column online.\nOffline there are several visual editors and full integration with Rstudio etc.",
-    "crumbs": [
-      "FAQ",
-      "Welcome",
-      "About this site"
-    ]
+    "text": "About this site\nThis page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest into a knowledge base.\nAlthough the web space is topic-centered any keyword can be searched using the full text search.\nThe creation of new pages, the editing of existing pages can be triggered directly via the right column online.\nOffline there are several visual editors and full integration with Rstudio etc."
   },
   {
     "objectID": "uav/mof-uav-about.html",
