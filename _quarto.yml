@@ -68,10 +68,10 @@ website:
           - mofgeodb/mof-geodb-datacollect.qmd
           - mofgeodb/mof-geodb-analysis.qmd
           - mofgeodb/mof-geodb-lit.qmd
-      - text: "---"          
+          - text: "---"          
           - href: http://137.248.191.201:8000/?PROJECT=creu/MOFGeoDB
             text: WebGIS MOFGeoDB
-      - text: "---"
+          - text: "---"
       - section: "WebGIS UAV Data"
         contents:
           - uav/mof-uav-about.qmd        
