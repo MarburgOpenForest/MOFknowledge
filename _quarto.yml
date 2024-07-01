@@ -14,7 +14,7 @@ website:
   search: 
     location: navbar
     type: textbox
-  page-footer: "Faculty of Geography (2018-2023)" 
+  page-footer: "Faculty of Geography (2018-2024)" 
   comments:
     utterances:
       repo: MarburgOpenForest/MOFknowledge
