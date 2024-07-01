@@ -57,7 +57,7 @@ website:
           - index.md
         #  - base/about.qmd
       - text: "---"
-      - section: "MOFgeoDB"
+      - section: "MOFgeoDB Description"
         contents:
           - mofgeodb/mof-geodb-about.qmd
           - mofgeodb/mof-geodb-views.qmd
@@ -68,9 +68,10 @@ website:
           - mofgeodb/mof-geodb-datacollect.qmd
           - mofgeodb/mof-geodb-analysis.qmd
           - mofgeodb/mof-geodb-lit.qmd
-          - text: "---"          
+      - text: "---"
+      - section: "WebGIS MOFGeoDB"
+        contents:
           - href: http://137.248.191.201:8000/?PROJECT=creu/MOFGeoDB
-            text: WebGIS MOFGeoDB
           - text: "---"
       - section: "WebGIS UAV Data"
         contents:
