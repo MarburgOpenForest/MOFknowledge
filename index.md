@@ -3,7 +3,7 @@ title: "The Marburg Open Forest knowledge web"
 open-graph:
   description: "Marburg Open Forest (MOF) is a teaching and research facility in the university forest."
   image: https://marburgopenforest.github.io/MOFknowledge/images/logo.jpg
-title-block-banner: images/DJI_0127.JPG
+title-block-banner: images/square-banner.png
 title-block-banner-color: "white"
 comments: false
 

@@ -8,7 +8,7 @@ date-format: "DD.MM.YYYY"
 bibliography: ../references/MOFbib.bib
 csl: ../references/journal-of-biogeography.csl
 link-citations: true
-title-block-banner: ../images/DJI_0071.JPG
+title-block-banner: ../images/about-banner.png
 title-block-banner-color: "white"
 ---
 

@@ -5,7 +5,7 @@ description: 'Views are used to get a defined subset and collection of data from
 author: D. Göttlicher
 date: '2021-12-10'
 date-format: "DD.MM.YYYY"
-title-block-banner: ../images/DJI_0071.JPG
+title-block-banner: ../images/fs-009_winterPano.jpg
 title-block-banner-color: "white"
 ---
 

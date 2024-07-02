@@ -7,6 +7,7 @@ execute:
 website:
   open-graph: true
   page-navigation: true  
+  bread-crumbs: false
   title: "Marburg Open Forest"
   site-url: https://marburgopengorest.github.io
   repo-url: https://github.com/marburgopenforest/MOFknowledge

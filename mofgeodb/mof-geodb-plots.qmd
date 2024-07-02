@@ -5,7 +5,7 @@ description: 'Various forest structural plot designs in the MOF'
 author: D. Göttlicher
 date: '2021-12-04'
 date-format: "DD.MM.YYYY"
-title-block-banner: ../images/DJI_0264.JPG
+title-block-banner: ../images/plot-banner.png
 title-block-banner-color: "black"
 ---
 
