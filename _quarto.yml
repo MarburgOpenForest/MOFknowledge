@@ -78,7 +78,7 @@ website:
       - section: "UAV Data Online Access"
         contents:
           - uav/mof-uav-about.qmd        
-          - href: https://tinyurl.com/drone-data
+          - href: https://tinyurl.com/mof-drone-data
             text: "Webserver UAV data"   
 
    
