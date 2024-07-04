@@ -1,20 +1,12 @@
 ---
 title: "Frequently asked Questions"
-editor: visual
+title-block-banner: ../images/about.jpg
+title-block-banner-color: "white"
 ---
 
-## Make sense topic
 
-::: {.callout-warning appearance="minimal"}
-This is a senseless question to meet a meaningfull answer
-:::
+::: {.callout-info collapse="true"}
+## You want to learn more about the Marburg Open Forest?
 
-::: {.callout-tip appearance="simple"}
-This is a meaningful answer to a senseless question
-:::
-
-::: {.callout-warning collapse="true"}
-## Learn More...
-
-This is a even **more** meaningful answer to a senseless question
+Have a look at the official [MOF-Home-Page](https://www.uni-marburg.de/de/marburg-open-forest)
 :::
