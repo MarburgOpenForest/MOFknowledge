@@ -5,11 +5,13 @@ description: 'General description of the available drone data'
 author: C. Reudenbach
 date: '2023-05-28'
 date-format: "DD.MM.YYYY"
-title-block-banner: ../images/header_gis.jpg
+title-block-banner: ../images/about.jpg
 title-block-banner-color: "#E0E0DD"
 ---
 
 
 
 Since 2016, numerous aerial surveys have been carried out in Marburg University Forest using various drones and sensors.  The focus has been on low-budget devices, i.e. commercially available consumer drones with RGB cameras or action cameras such as GoPro or gitup/mapir. Self-built copters and the 3DR Solo served as the copter base. DJI consumer products and enterprise platforms were also increasingly used. 
+
 In addition to the RGB recordings, numerous flights were carried out with the Altum Sensor and the L1 Zenmuse and currently with the Mavic 3 Multispectral Enterprise. The processed data and metadata as well as selected products such as point clouds and surface models are available on the [MOF droneDB web server](http://137.248.191.201:5000/r/uav). 
+

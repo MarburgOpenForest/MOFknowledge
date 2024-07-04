@@ -1,8 +1,10 @@
 ---
 title: ""
 comments: false
+title-block-banner: ../images/about.jpg
+title-block-banner-color: "white"
 ---
-![](/images/Adam-Savage-Quotes-3.jpg)
+
 
 # About this site
 This page summarizes the essential information, workflows , basic literature and web resources from the Marburg Open Forest  into a knowledge base.
