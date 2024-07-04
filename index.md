@@ -1,5 +1,5 @@
 ---
-title: "The Marburg Open Forest knowledge web"
+title: "The Marburg Open Forest data hub"
 open-graph:
   description: "Marburg Open Forest (MOF) is a teaching and research facility in the university forest."
   image: https://marburgopenforest.github.io/MOFknowledge/images/logo.jpg
